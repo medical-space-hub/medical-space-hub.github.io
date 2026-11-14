@@ -1,0 +1,29 @@
+{
+  "version": "22.0.0",
+  "source": "Anatria-3D anatomical asset exports, adapted from Z-Anatomy/BodyParts3D and NIH HRA",
+  "source_commit": "c830ea3a3b62030bf08e7353e8cb641bd38d2bfa",
+  "source_repository": "https://github.com/Nurkan1/Anatria-3D",
+  "base_url": "https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@c830ea3a3b62030bf08e7353e8cb641bd38d2bfa/public/anatomy/",
+  "raw_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/c830ea3a3b62030bf08e7353e8cb641bd38d2bfa/public/anatomy/",
+  "disclaimer": "Models reflect selected reference anatomical datasets. Male and female structural coverage is not identical. No missing structures are fabricated.",
+  "sexes": {
+    "male": {"manifest": "manifest.json", "license": "CC BY-SA 4.0", "credit": "BodyParts3D / Z-Anatomy / Anatria asset pipeline", "coverage": "Multiple whole-body systems"},
+    "female": {"manifest": "manifest_female.json", "license": "CC BY 4.0", "credit": "NIH HuBMAP Human Reference Atlas / Visible Human Female", "coverage": "Selected trunk, organ, skin and skeletal structures; not full musculature or nervous system"}
+  },
+  "systems": [
+    {"id":"skeletal","name":"Skeletal System","group":"Body structure","color":"#e6decf","male":"skeletal_male.glb","female":"skeletal_female.glb","male_bytes":2823900,"female_bytes":1356072},
+    {"id":"articular","name":"Articular System","group":"Body structure","color":"#8cbfc8","male":"articular_male.glb","male_bytes":1541408},
+    {"id":"muscular","name":"Muscular System","group":"Body structure","color":"#c96d68","male":"muscular_male.glb","male_bytes":11972116},
+    {"id":"nervous","name":"Nervous System","group":"Neural & special senses","color":"#eac48a","male":"nervous_male.glb","male_bytes":8535424},
+    {"id":"cardiovascular","name":"Cardiovascular System","group":"Circulation","color":"#d95769","male":"cardiovascular_male.glb","female":"cardiovascular_female.glb","male_bytes":7217588,"female_bytes":448900},
+    {"id":"lymphatic","name":"Lymphatic System","group":"Circulation","color":"#76bf98","male":"lymphatic_male.glb","female":"lymphatic_female.glb","male_bytes":509592,"female_bytes":42572},
+    {"id":"respiratory","name":"Respiratory System","group":"Internal organs","color":"#86aeea","male":"respiratory_male.glb","male_bytes":585232},
+    {"id":"digestive","name":"Digestive System","group":"Internal organs","color":"#c8966b","male":"digestive_male.glb","female":"digestive_female.glb","male_bytes":929984,"female_bytes":476856},
+    {"id":"renal","name":"Urinary System","group":"Internal organs","color":"#a887d0","male":"renal_male.glb","female":"renal_female.glb","male_bytes":59040,"female_bytes":617164},
+    {"id":"endocrine","name":"Endocrine System","group":"Internal organs","color":"#eeae7a","male":"endocrine_male.glb","male_bytes":39824},
+    {"id":"reproductive","name":"Reproductive System","group":"Internal organs","color":"#b49ace","male":"reproductive_male.glb","female":"reproductive_female.glb","male_bytes":63600,"female_bytes":428960},
+    {"id":"integumentary","name":"Integumentary System","group":"Body structure","color":"#e5b8a6","female":"integumentary_female.glb","female_bytes":2183908},
+    {"id":"visceral","name":"Other Visceral Structures","group":"Additional reference","color":"#b89189","male":"visceral_male.glb","male_bytes":1700280},
+    {"id":"regional","name":"Regional Anatomy","group":"Additional reference","color":"#9eacbf","male":"regional_male.glb","male_bytes":765860}
+  ]
+}
