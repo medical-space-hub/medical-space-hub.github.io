@@ -928,6 +928,255 @@ body{color:#172943;background:#f6f8fd!important}
 .msh-guest-art{display:none!important}.msh-guest-hero{grid-template-columns:minmax(0,1fr)!important}.msh-guest-copy{max-width:850px!important}
 </style>
 <link rel="icon" type="image/svg+xml" href="assets/medstudy-logo.svg">
+<style id="msh-v31-premium">
+/* MedStudy Hub v31 — calm Royal Blue experience; existing Supabase and owner tools remain intact. */
+:root{--msh31-blue:#2454d3;--msh31-royal:#2463e6;--msh31-ink:#152641;--msh31-muted:#687991;--msh31-border:#e2eaf5;--msh31-radius:22px}
+body{background:#f7f9fd;color:var(--msh31-ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #86afff!important;outline-offset:3px}
+/* Focused shell and sidebar, without removing any existing routes or admin affordances. */
+.sidebar{background:#fff!important;border-left:1px solid #e9eef7!important;padding:20px 13px!important;box-shadow:none!important;width:244px!important}
+.main{margin-right:244px!important}
+.sidebar .brand{padding:4px 8px 18px}
+.sidebar .nav{gap:9px}
+.msh-nav-label{padding:19px 12px 6px;color:#91a1b7;font:800 10px 'Inter',sans-serif;letter-spacing:.12em}
+.msh-nav-primary{display:grid;gap:5px}
+.sidebar #mainNav .msh-nav-primary button{min-height:45px}
+.sidebar #mainNav .msh-nav-primary button .navtext{font-size:12px}
+.msh-nav-group{border-top:1px solid #eef2f8;margin-top:5px;padding-top:8px}
+.msh-nav-group summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:11px 12px;cursor:pointer;color:#7789a5;font:800 10px 'Inter',sans-serif;letter-spacing:.07em;border-radius:11px;user-select:none}
+.msh-nav-group summary::-webkit-details-marker{display:none}
+.msh-nav-group summary:hover,.msh-nav-group[open] summary{background:#f5f8ff;color:#315bc1}
+.msh-nav-group summary span{font-size:16px;transition:transform .2s}
+.msh-nav-group[open] summary span{transform:rotate(180deg)}
+.msh-nav-sub{display:grid;gap:2px;padding:3px 0 5px 9px}
+.sidebar #mainNav .msh-nav-sub button{min-height:37px!important;padding:7px 10px!important;font-size:11px!important;border-radius:10px}
+.sidebar #mainNav .msh-nav-sub .navicon{width:19px;height:19px}
+.sidebar #mainNav .msh-nav-sub .navicon svg{width:15px;height:15px}
+.sidebar #mainNav .msh-nav-sub .navbadge{display:none}
+.topbar{height:73px!important;padding:0 clamp(18px,2.5vw,38px)!important;border-bottom:1px solid #e7edf7!important;background:#fff!important}
+.topbrand-title{letter-spacing:-.035em}
+.topbrand-title .tag{display:none}
+.topactions{gap:10px}
+.topactions [data-page="mylibrary"],.topactions [data-page="progress"]{display:none!important}
+.msh-staff-shortcut{display:inline-flex;align-items:center;justify-content:center;border:1px solid #bcd0fb;background:#eef4ff;color:#2454d3;font:750 11px 'Inter',sans-serif;padding:10px 13px;border-radius:11px;white-space:nowrap}
+.msh-staff-shortcut[hidden],body:not(.msh-staff) .msh-staff-shortcut{display:none!important}
+.content{max-width:1520px;padding:31px clamp(22px,3.2vw,48px) 65px}
+/* Guest Home is a real landing page, without a dashboard or sidebar. */
+body:not(.is-authenticated):has(#page-home.active):not(.msh-anatomy-active) .sidebar{display:none!important}
+body:not(.is-authenticated):has(#page-home.active):not(.msh-anatomy-active) .main{margin-right:0!important}
+body:not(.is-authenticated):has(#page-home.active) .content{max-width:1360px;margin:0 auto;width:100%;padding:28px clamp(17px,3.5vw,50px) 75px!important}
+body:not(.is-authenticated):has(#page-home.active) .mobilebar{display:none!important}
+body:not(.is-authenticated):has(#page-home.active) .topbar{padding:0 clamp(18px,4vw,70px)!important}
+body:not(.is-authenticated):has(#page-home.active) .topbrand-info .crumb{display:none}
+body:not(.is-authenticated):has(#page-home.active) .topactions .iconbtn{display:none!important}
+#mshGuestHome{direction:ltr;text-align:left;font-family:'Inter','Cairo',sans-serif}
+#mshGuestHome .msh-guest-hero{position:relative;min-height:520px;padding:clamp(46px,7vw,92px) clamp(24px,6vw,85px)!important;background:linear-gradient(116deg,#103586 0%,#2054c9 52%,#4383ed 100%)!important;border-radius:30px!important;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;isolation:isolate;box-shadow:0 25px 65px rgba(28,75,166,.17)}
+#mshGuestHome .msh-guest-hero:after{content:none!important}
+#mshGuestHome .msh-guest-copy{position:relative;z-index:2;max-width:760px;margin:auto;text-align:center}
+#mshGuestHome .msh-eyebrow{font:750 11px 'Inter',sans-serif;letter-spacing:.13em;color:#bcd5ff;display:inline-flex;align-items:center;gap:10px}
+#mshGuestHome .msh-guest-hero .msh-eyebrow{border:1px solid rgba(218,232,255,.27);background:rgba(255,255,255,.09);padding:11px 16px;border-radius:100px}
+.msh-live-dot{width:7px;height:7px;background:#9dd1ff;box-shadow:0 0 0 4px rgba(157,209,255,.14);border-radius:50%;display:inline-block}
+#mshGuestHome .msh-guest-copy h1{font:800 clamp(39px,5.7vw,72px)/1.08 'Inter',sans-serif;letter-spacing:-.058em;color:#fff!important;margin:26px 0 22px!important;text-shadow:none!important}
+#mshGuestHome .msh-guest-copy h1 em{font-style:normal;color:#bdd9ff}
+#mshGuestHome .msh-guest-copy>p{font:400 clamp(14px,1.6vw,17px)/1.85 'Inter',sans-serif;color:#e1ebff!important;max-width:635px;margin:0 auto!important}
+#mshGuestHome .msh-guest-copy .msh-hero-footnote{font-size:11px!important;color:#c4d8fc!important;margin-top:20px!important}
+#mshGuestHome .msh-guest-actions{display:flex!important;gap:12px;justify-content:center;flex-wrap:wrap;margin:31px auto 0!important}
+#mshGuestHome .msh-guest-actions .btn{font:750 13px 'Inter',sans-serif!important;min-height:49px;min-width:183px;padding:14px 24px!important;border-radius:100px!important;display:inline-flex;align-items:center;justify-content:center;gap:15px;box-shadow:none!important;transition:transform .2s,background .2s,box-shadow .2s}
+#mshGuestHome .msh-guest-actions .btn:hover{transform:translateY(-2px)}
+#mshGuestHome .msh-guest-actions .btn.primary{background:#fff!important;color:#174ab8!important;border:1px solid #fff}
+#mshGuestHome .msh-guest-actions .btn.outline{background:rgba(255,255,255,.08)!important;color:#fff!important;border:1px solid rgba(255,255,255,.45)!important}
+.msh-hero-deco{position:absolute;z-index:0;pointer-events:none;border:1px solid rgba(255,255,255,.12);border-radius:50%}
+.msh-hero-deco-a{width:590px;height:590px;right:-330px;top:-320px;box-shadow:0 0 0 85px rgba(255,255,255,.027),0 0 0 175px rgba(255,255,255,.02)}
+.msh-hero-deco-b{width:390px;height:390px;left:-245px;bottom:-265px;box-shadow:0 0 0 75px rgba(255,255,255,.025)}
+#mshGuestHome .msh-guest-metrics{max-width:900px;margin:0 auto 55px!important;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid #e5ebf5;background:#fff;border-radius:0 0 20px 20px;box-shadow:0 15px 36px rgba(31,73,146,.05);overflow:hidden}
+#mshGuestHome .msh-guest-metrics>div{background:transparent!important;box-shadow:none!important;border:0!important;border-right:1px solid #e8eef8;border-radius:0!important;min-height:97px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 8px!important}
+#mshGuestHome .msh-guest-metrics>div:last-child{border-right:0}
+#mshGuestHome .msh-guest-metrics strong{font:800 27px 'Inter',sans-serif;color:#194aa9!important}
+#mshGuestHome .msh-guest-metrics span{font:550 11px 'Inter',sans-serif;color:#71819a}
+.msh-explore-section{scroll-margin-top:110px}
+#mshGuestHome .msh-section-heading{margin:0 0 27px!important}
+#mshGuestHome .msh-section-heading h2{font:800 clamp(25px,3vw,36px)/1.25 'Inter',sans-serif;color:#162b4c;letter-spacing:-.045em;margin:10px 0}
+#mshGuestHome .msh-section-heading p{font:400 14px/1.8 'Inter',sans-serif;color:#718099;margin:0}
+#mshGuestHome .msh-section-heading .msh-eyebrow{color:#2454d3}
+#mshGuestHome .msh-guest-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+#mshGuestHome .msh-guest-tile{min-width:0;min-height:320px!important;padding:0!important;border:1px solid #dfe8f7!important;border-radius:24px!important;background:#fff!important;box-shadow:0 10px 34px rgba(23,56,115,.045)!important;display:flex!important;flex-direction:column!important;text-align:left!important;gap:0!important;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+#mshGuestHome .msh-guest-tile:hover{transform:translateY(-5px)!important;box-shadow:0 24px 46px rgba(29,73,149,.13)!important;border-color:#b5c9f0!important}
+#mshGuestHome .msh-feature-main{grid-column:1/-1;min-height:345px!important;flex-direction:row!important;align-items:center;justify-content:space-between;background:linear-gradient(116deg,#f7faff,#e8f1ff)!important}
+#mshGuestHome .msh-feature-main .msh-feature-text{padding:46px 46px 42px!important;max-width:570px;flex:1}
+#mshGuestHome .msh-feature-main .msh-feature-visual{width:45%;height:330px;min-height:300px}
+#mshGuestHome .msh-feature-small .msh-feature-visual{height:185px;width:100%;flex-shrink:0}
+#mshGuestHome .msh-feature-small .msh-feature-text{padding:25px 27px 28px!important;flex:1}
+#mshGuestHome .msh-feature-text{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+#mshGuestHome .msh-feature-text strong{font:800 clamp(21px,2.1vw,28px)/1.3 'Inter',sans-serif;color:#152c4d!important;text-align:left!important;direction:ltr!important;letter-spacing:-.035em}
+#mshGuestHome .msh-feature-text>span:not(.msh-feature-kicker):not(.msh-tile-link){font:400 13px/1.75 'Inter',sans-serif;color:#6b7c96!important}
+#mshGuestHome .msh-feature-kicker{font:750 10px 'Inter',sans-serif;color:#2454d3!important;letter-spacing:.12em}
+#mshGuestHome .msh-tile-link{font:750 12px 'Inter',sans-serif;color:#2454d3!important;margin-top:10px!important;display:flex;gap:9px;align-items:center}
+#mshGuestHome .msh-feature-visual{display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 48%,#edf4ff,#dfeaff);position:relative}
+#mshGuestHome .msh-feature-visual svg{display:block;width:100%;height:100%;max-height:310px;max-width:490px}
+#mshGuestHome .msh-feature-visual img{display:block;width:100%!important;height:100%!important;object-fit:cover!important}
+#mshGuestHome .msh-feature-visual-library{background:radial-gradient(circle at 52% 52%,#f7faff,#dbe9ff)}
+#mshGuestHome .msh-feature-visual-practice{background:linear-gradient(135deg,#f2f7ff,#dce9ff)}
+#mshGuestHome .msh-feature-visual-study{background:linear-gradient(135deg,#f5f8ff,#e0e9ff)}
+#mshGuestHome .msh-guest-note{font:500 12px/1.8 'Inter',sans-serif;color:#7b8aa3;background:transparent!important;border:0!important;padding:0!important;margin:25px 0 0!important}
+/* Catalog and study hub */
+.msh-premium-page{font-family:'Inter','Cairo',sans-serif;direction:ltr;text-align:left}
+.msh-page-breadcrumb{display:flex;align-items:center;gap:11px;color:#93a1b6;font-size:12px;margin:0 0 29px}
+.msh-page-breadcrumb button{font-size:12px;color:#73849d;padding:0}
+.msh-page-breadcrumb strong{color:#2454d3;font-weight:700}
+.msh-catalog-heading{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:24px}
+.msh-catalog-heading .msh-eyebrow{color:#2454d3;font:800 10px 'Inter',sans-serif;letter-spacing:.14em}
+.msh-catalog-heading h1{font:800 clamp(28px,3vw,40px) 'Inter',sans-serif;letter-spacing:-.05em;color:#172b49;margin:11px 0 9px}
+.msh-catalog-heading p{font:400 13px/1.75 'Inter',sans-serif;color:#728198;margin:0;max-width:630px}
+.msh-search-top{font:700 12px 'Inter',sans-serif;border:1px solid #d8e4f6;background:white;color:#2454d3;border-radius:12px;padding:12px 17px;white-space:nowrap}
+.msh-catalog-search{display:flex;align-items:center;gap:13px;border:1px solid #dbe6f6;border-radius:15px;background:#fff;padding:0 18px;min-height:55px;box-shadow:0 7px 22px #193f8108}
+.msh-catalog-search:focus-within{border-color:#86a9f2;box-shadow:0 0 0 3px #cfe0ff66}
+.msh-catalog-search svg{width:20px;height:20px;color:#7d8fae;flex-shrink:0}
+.msh-catalog-search input{font:450 13px 'Inter',sans-serif;outline:0;border:0;background:transparent;width:100%;min-width:0;direction:ltr;text-align:left;color:#172b49}
+.msh-catalog-filters{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0 32px}
+.msh-catalog-filters button{font:700 11px 'Inter',sans-serif;color:#5e718e;background:#fff;border:1px solid #e1e9f5;border-radius:99px;padding:10px 17px}
+.msh-catalog-filters button.active{background:#2454d3;border-color:#2454d3;color:#fff}
+.msh-catalog-section-label{margin:29px 0 16px}
+.msh-catalog-section-label h2{font:800 19px 'Inter',sans-serif;letter-spacing:-.025em;color:#1a2c47;margin:0 0 7px}
+.msh-catalog-section-label p{font:400 12px 'Inter',sans-serif;color:#8190a6;margin:0}
+.msh-catalog-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.msh-source-card,.msh-resource-card{min-width:0;border:1px solid #e0e9f5;background:#fff;border-radius:19px;box-shadow:0 6px 22px rgba(22,63,128,.035);display:flex;align-items:center;text-align:left;gap:15px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.msh-source-card:hover,.msh-resource-card:hover,.msh-studyhub-grid button:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(22,63,128,.09);border-color:#b7caf2}
+.msh-source-card{min-height:145px;padding:22px 17px;flex-wrap:wrap}
+.msh-source-emblem{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#1e4bb9,#4a84f3);color:white;font:850 20px 'Inter',sans-serif;letter-spacing:-.08em;flex-shrink:0}
+.msh-source-emblem span{font-size:11px;letter-spacing:0}
+.msh-emblem-bb{background:linear-gradient(135deg,#244178,#3d6bd4);font-size:15px;letter-spacing:-.07em}
+.msh-emblem-nn{background:linear-gradient(135deg,#285d8b,#3e8cb9)}
+.msh-source-copy{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+.msh-source-copy strong,.msh-resource-card strong{font:750 14px 'Inter',sans-serif;color:#1d3555}
+.msh-source-copy small,.msh-resource-card small{font:450 11px/1.5 'Inter',sans-serif;color:#8190a5}
+.msh-card-arrow{margin-left:auto;color:#4d74c8;font:700 19px 'Inter',sans-serif}
+.msh-catalog-resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.msh-resource-card{min-height:99px;padding:18px 20px}
+.msh-resource-card>span:nth-child(2){display:flex;flex-direction:column;gap:7px;flex:1}
+.msh-resource-icon{width:49px;height:49px;display:grid;place-items:center;border-radius:13px;background:#eef4ff;color:#2454d3;font:800 24px 'Inter',sans-serif;flex-shrink:0}
+.msh-catalog-empty{padding:35px;text-align:center;background:#fff;border:1px dashed #d5e1f5;border-radius:16px;color:#7c8ca4;font:500 13px 'Inter',sans-serif}
+.msh-premium-page [data-msh-catalog-item][hidden],.msh-catalog-section-label[hidden],.msh-catalog-empty[hidden]{display:none!important}
+.msh-studyhub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:28px}
+.msh-studyhub-grid button{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:190px;padding:22px;text-align:left;background:#fff;border:1px solid #e0e9f5;border-radius:19px;box-shadow:0 6px 22px rgba(22,63,128,.035);transition:.2s}
+.msh-studyhub-grid button strong{font:750 15px 'Inter',sans-serif;color:#1d3555}
+.msh-studyhub-grid button small{font:400 12px/1.6 'Inter',sans-serif;color:#8090a5}
+.msh-studyhub-grid .msh-card-arrow{margin-top:auto;margin-left:0}
+.msh-studyhub-note{margin-top:25px;font:450 12px/1.8 'Inter',sans-serif;color:#7889a2}
+/* Authenticated dashboard: only one focused summary; original content stays in DOM for CMS. */
+#page-home .msh-member-home>:not(#mshV10Dashboard){display:none!important}
+#mshV10Dashboard{direction:ltr;text-align:left;font-family:'Inter','Cairo',sans-serif}
+.msh31-dashboard{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:17px}
+.msh31-dashboard .msh31-welcome{grid-column:span 8;min-height:245px;border-radius:23px;padding:32px 34px;background:linear-gradient(116deg,#123c9e,#2b69e8);color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:13px}
+.msh31-dashboard .msh31-welcome .msh31-kicker{font:750 10px 'Inter',sans-serif;letter-spacing:.14em;color:#c3d8ff}
+.msh31-dashboard .msh31-welcome h2{font:800 clamp(25px,3vw,35px) 'Inter',sans-serif;letter-spacing:-.045em;color:white;margin:0}
+.msh31-dashboard .msh31-welcome p{font:450 13px/1.75 'Inter',sans-serif;color:#e3edff;max-width:560px;margin:0}
+.msh31-dashboard .msh31-welcome button{background:#fff;color:#2353b9;border-radius:99px;padding:12px 20px;font:750 12px 'Inter',sans-serif;margin-top:6px}
+.msh31-dashboard .msh31-today{grid-column:span 4;min-height:245px;background:#fff;border:1px solid #e1eaf7;border-radius:23px;padding:27px;display:flex;flex-direction:column;gap:13px}
+.msh31-dashboard .msh31-today h3{font:750 17px 'Inter',sans-serif;margin:0;color:#1b3153}
+.msh31-dashboard .msh31-today p{font:450 12px/1.7 'Inter',sans-serif;color:#7888a2;margin:0}
+.msh31-dashboard .msh31-meter{height:9px;background:#e9f0fc;border-radius:20px;overflow:hidden;margin-top:6px}
+.msh31-dashboard .msh31-meter i{height:100%;display:block;background:#2867e8;border-radius:20px;max-width:100%}
+.msh31-dashboard .msh31-today small{font:650 11px 'Inter',sans-serif;color:#5676ae}
+.msh31-dashboard .msh31-summary{grid-column:span 4;min-height:190px;border:1px solid #e1eaf7;background:#fff;border-radius:21px;padding:25px;display:flex;flex-direction:column;gap:11px;text-align:left}
+.msh31-dashboard .msh31-summary .msh31-label{font:750 10px 'Inter',sans-serif;color:#5675a7;letter-spacing:.08em}
+.msh31-dashboard .msh31-summary strong{font:800 29px 'Inter',sans-serif;color:#1c3e80}
+.msh31-dashboard .msh31-summary p{font:450 12px/1.6 'Inter',sans-serif;color:#8291a8;margin:0}
+.msh31-dashboard .msh31-summary .msh-card-arrow{margin-top:auto;margin-left:0;font-size:15px}
+.msh31-dashboard .msh31-staff-link{grid-column:1/-1;display:flex;justify-content:flex-start}
+.msh31-dashboard .msh31-staff-link button{background:#eef4ff;border:1px solid #c9d9f7;color:#2454d3;border-radius:12px;padding:11px 16px;font:750 12px 'Inter',sans-serif}
+/* Split lecture: real resource preview where supported, existing AI chat moved into a side panel. */
+.msh31-lesson{direction:ltr;text-align:left;font-family:'Inter','Cairo',sans-serif;max-width:1400px;margin:auto}
+.msh31-lesson-head{margin-bottom:22px}
+.msh31-lesson-breadcrumb{display:flex;gap:10px;align-items:center;color:#8291aa;font:600 11px 'Inter',sans-serif;margin-bottom:15px}
+.msh31-lesson-breadcrumb button{padding:0;color:#2454d3;font:650 11px 'Inter',sans-serif}
+.msh31-lesson-head h1{font:800 clamp(23px,2.7vw,33px) 'Inter',sans-serif;letter-spacing:-.04em;color:#1b2e4b;margin:0 0 9px}
+.msh31-lesson-head p{font:450 12px 'Inter',sans-serif;color:#8392a8;margin:0}
+.msh31-lesson-grid{display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:19px;align-items:start}
+.msh31-lesson-main{min-width:0}
+.msh31-viewer{background:#f0f5ff;border:1px solid #dce7f7;border-radius:20px;overflow:hidden;min-height:315px;display:flex;align-items:center;justify-content:center;position:relative}
+.msh31-viewer iframe,.msh31-viewer video{width:100%;height:440px;border:0;display:block;background:#0d1830}
+.msh31-viewer-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:42px 20px;gap:15px}
+.msh31-viewer-empty .msh31-file-glyph{height:65px;width:65px;border-radius:20px;display:grid;place-items:center;background:#dfeaff;color:#2454d3;font-size:27px}
+.msh31-viewer-empty strong{font:750 17px 'Inter',sans-serif;color:#203957}
+.msh31-viewer-empty p{font:450 12px/1.7 'Inter',sans-serif;color:#7e8ca2;max-width:380px;margin:0}
+.msh31-lesson-link{display:inline-flex;align-items:center;gap:8px;background:#2454d3;color:#fff;border-radius:99px;padding:12px 19px;font:750 12px 'Inter',sans-serif}
+.msh31-lesson-tabs{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:18px 0 14px;border-bottom:1px solid #e0e8f4;padding-bottom:9px}
+.msh31-lesson-tabs button{font:700 12px 'Inter',sans-serif;color:#6f819a;border-radius:10px;padding:11px 15px}
+.msh31-lesson-tabs button[aria-selected="true"]{color:#2454d3;background:#eaf1ff}
+.msh31-lesson-tabcontent{background:#fff;border:1px solid #e0e8f4;border-radius:17px;padding:23px;min-height:165px}
+.msh31-lesson-tabcontent h3{font:750 16px 'Inter',sans-serif;color:#1b3357;margin:0 0 12px}
+.msh31-lesson-tabcontent p{font:450 12px/1.85 'Inter',sans-serif;color:#72839b;margin:0 0 12px}
+.msh31-lesson-tabcontent .msh31-lesson-link{margin-top:7px}
+.msh31-notes{display:block;width:100%;min-height:165px;resize:vertical;border:1px solid #d6e2f3;border-radius:13px;padding:15px;font:450 13px/1.7 'Inter',sans-serif;color:#20395c;direction:ltr;text-align:left}
+.msh31-notes-status{font:500 11px 'Inter',sans-serif;color:#7b8aa1;margin-top:9px}
+.msh31-lesson-aside{border:1px solid #e0e8f4;border-radius:20px;background:#fff;padding:20px;position:sticky;top:95px}
+.msh31-lesson-aside h3{font:750 14px 'Inter',sans-serif;margin:0 0 9px;color:#1c3559}
+.msh31-lesson-aside p{font:450 11px/1.6 'Inter',sans-serif;color:#8b99ac;margin:0 0 13px}
+.msh31-course-list{display:flex;flex-direction:column;gap:6px;max-height:430px;overflow:auto}
+.msh31-course-list button{display:flex;align-items:flex-start;gap:9px;width:100%;text-align:left;background:#f8faff;border:1px solid transparent;border-radius:11px;padding:11px 10px;font:600 11px/1.55 'Inter',sans-serif;color:#5f7292}
+.msh31-course-list button.active{background:#eaf1ff;border-color:#c9dbfc;color:#1d54c5}
+.msh31-course-list button .msh31-num{font:800 10px 'Inter',sans-serif;color:#8fa7cf;flex-shrink:0}
+.msh31-lesson-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:17px}
+.msh31-lesson-bottom button{background:#fff;border:1px solid #dce6f5;border-radius:12px;padding:12px 16px;color:#2a559f;font:750 12px 'Inter',sans-serif}
+.msh31-lesson-bottom button:disabled{opacity:.4;cursor:not-allowed}
+.msh31-ai-trigger{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:#eaf1ff;border:1px solid #cbdcfa;color:#2454d3;border-radius:13px;padding:14px;font:750 12px 'Inter',sans-serif}
+.msh31-ai-panel{position:fixed;z-index:1001;inset:0 0 0 auto;width:min(470px,100vw);background:#fff;box-shadow:-25px 0 60px #0b245d33;display:flex;flex-direction:column;padding:0;direction:rtl}
+.msh31-ai-panel[hidden],.msh31-ai-backdrop[hidden]{display:none!important}
+.msh31-ai-panel .msh31-ai-panel-head{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-bottom:1px solid #e4ebf7;direction:ltr;font:750 13px 'Inter',sans-serif;color:#1b3154}
+.msh31-ai-panel-head button{border-radius:9px;padding:6px 11px;background:#edf3ff;color:#2454d3;font:700 12px 'Inter',sans-serif}
+.msh31-ai-panel-host{flex:1;min-height:0;overflow:hidden;padding:12px;display:flex}
+.msh31-ai-panel-host .msh-chat-shell{height:100%;min-height:0;width:100%;border-radius:15px;box-shadow:none;margin:0}
+.msh31-ai-panel-host .msh-chat-top{padding:12px}
+.msh31-ai-panel-host .msh-chat-top h1{font-size:14px}
+.msh31-ai-panel-host .msh-chat-log{padding:13px}
+.msh31-ai-panel-host .msh-chat-compose-wrap{padding:10px}
+.msh31-ai-backdrop{position:fixed;inset:0;z-index:1000;background:#071d4270;backdrop-filter:blur(3px)}
+body.msh31-ai-open{overflow:hidden}
+/* Footer: text-only identity; no decorative site icon. */
+.site-footer{border-top:1px solid #e8eef8!important;background:#fff!important;padding:23px clamp(18px,3vw,44px)!important;gap:18px}
+.site-footer .footer-brand{gap:0!important}
+.site-footer .msh-footer-mark{display:none!important}
+.site-footer .footer-links{display:flex;gap:17px;flex-wrap:wrap}
+.site-footer .footer-links .textbtn{font:600 11px 'Inter',sans-serif;color:#7b8aa2}
+/* Responsive layouts */
+@media(min-width:769px) and (max-width:1160px){.sidebar{width:224px!important}.main{margin-right:224px!important}.msh-catalog-source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.msh31-lesson-grid{grid-template-columns:minmax(0,1fr) 230px}.msh31-dashboard .msh31-welcome{grid-column:span 7}.msh31-dashboard .msh31-today{grid-column:span 5}}
+@media(max-width:768px){.main{margin-right:0!important}.sidebar{display:none!important}.content{padding:20px 15px calc(98px + env(safe-area-inset-bottom))!important}.topbar{height:66px!important;padding:0 14px!important}.topbrand-logo{height:36px!important;width:36px!important}.topbrand-title{font-size:13px!important}.topbrand-title .tag{display:none!important}.topbrand-info .crumb{font-size:9px}.topactions .auth-pill{font-size:10px;padding:0 10px}.msh-staff-shortcut{font-size:10px;padding:8px}#mshGuestHome .msh-guest-hero{min-height:450px!important;padding:48px 22px!important;border-radius:23px!important}#mshGuestHome .msh-guest-copy h1{font-size:clamp(36px,8vw,50px)!important}#mshGuestHome .msh-guest-actions{display:flex!important;flex-direction:column;align-items:stretch;max-width:270px}#mshGuestHome .msh-guest-actions .btn{min-width:0!important;width:100%;font-size:12px!important}#mshGuestHome .msh-guest-metrics{margin-bottom:43px!important}#mshGuestHome .msh-guest-metrics>div{min-height:83px;padding:12px 4px!important}#mshGuestHome .msh-guest-metrics strong{font-size:21px}#mshGuestHome .msh-guest-metrics span{font-size:9px;text-align:center}#mshGuestHome .msh-guest-grid{grid-template-columns:1fr!important}#mshGuestHome .msh-feature-main{flex-direction:column-reverse!important;align-items:stretch;min-height:0!important}#mshGuestHome .msh-feature-main .msh-feature-visual{width:100%;height:210px;min-height:0}#mshGuestHome .msh-feature-main .msh-feature-text{padding:25px!important;max-width:none}#mshGuestHome .msh-feature-small .msh-feature-visual{height:185px}#mshGuestHome .msh-guest-tile{min-height:0!important}#mshGuestHome .msh-feature-small .msh-feature-text{padding:24px!important}.msh-catalog-heading{align-items:flex-start;flex-direction:column}.msh-catalog-source-grid,.msh-catalog-resource-grid{grid-template-columns:1fr}.msh-studyhub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.msh31-dashboard .msh31-welcome,.msh31-dashboard .msh31-today{grid-column:span 12}.msh31-dashboard .msh31-summary{grid-column:span 6}.msh31-dashboard .msh31-welcome{min-height:215px;padding:25px}.msh31-lesson-grid{grid-template-columns:1fr}.msh31-lesson-aside{position:static;order:2}.msh31-viewer iframe,.msh31-viewer video{height:310px}.msh31-lesson-tabs{gap:3px}.msh31-lesson-tabs button{font-size:11px;padding:10px 12px}.msh31-ai-panel{width:100vw}.msh31-ai-panel-host{padding:7px}.msh31-ai-panel-host .msh-chat-shell{height:100%}.msh31-lesson-tabcontent{padding:18px}.msh31-lesson-bottom{margin-bottom:15px}}
+@media(max-width:440px){.msh-studyhub-grid{grid-template-columns:1fr}.msh31-dashboard .msh31-summary{grid-column:span 12}.msh31-lesson-bottom button{font-size:11px;padding:10px}.msh-catalog-filters button{padding:9px 12px;font-size:10px}#mshGuestHome .msh-guest-hero .msh-eyebrow{font-size:8px!important;padding:10px!important}}
+@media(prefers-reduced-motion:reduce){#mshGuestHome .msh-guest-tile,.msh-source-card,.msh-resource-card,.msh-studyhub-grid button{transition:none!important}html{scroll-behavior:auto}}
+/* Hidden attributes must win over authored card layouts and CMS styles. */
+#mshGuestHome .msh-guest-tile[hidden],#page-catalog [hidden],#page-studyhub [hidden],#mshV10Dashboard[hidden]{display:none!important}
+.msh31-mobile-group{border-bottom:1px solid #e8eef7;padding:5px 0}
+.msh31-mobile-group summary{cursor:pointer;padding:13px 10px;font:800 11px 'Inter',sans-serif;color:#6982ae;list-style:none}
+.msh31-mobile-group summary::-webkit-details-marker{display:none}
+.msh31-mobile-group button{width:100%;display:flex;gap:10px;align-items:center;text-align:left;padding:11px 12px;font:650 12px 'Inter','Cairo',sans-serif;color:#324d75;border-radius:10px}
+.msh31-mobile-group button svg{height:18px;width:18px;stroke:#2454d3}
+.msh31-mobile-group button.active{background:#eaf1ff;color:#2454d3}
+/* The legacy dashboard host is a 12-column grid; the v31 dashboard owns its own grid. */
+#page-home #mshV10Dashboard:not([hidden]){display:block!important;width:100%;max-width:100%}
+#page-home #mshV10Dashboard>.msh31-dashboard{width:100%;min-width:0}
+body:has(#page-home.active) .msh-focus-button{display:none!important}
+
+</style>
+<style id="msh-v32-refinements">
+/* v32 final visual/access refinements */
+.topbrand-logo,.sidebar .brandmark{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important;overflow:hidden;border-radius:14px}
+.topbrand-logo svg,.sidebar .brandmark svg{display:block;width:100%;height:100%;flex:none}
+body:not(.is-authenticated):has(#page-home.active) .topbar{direction:ltr!important}
+body:not(.is-authenticated):has(#page-home.active) .topbrand{direction:ltr!important}
+body:not(.is-authenticated):has(#page-home.active) .topbrand-title{font-family:'Inter',sans-serif}
+.msh-staff-shortcut:not([hidden]){display:inline-flex!important}
+@media(max-width:768px){body:not(.is-authenticated):has(#page-home.active) .topbar{direction:ltr!important}}
+</style>
+<style id="msh-v33-usmle-ui">
+/* v33: English-first learning-source navigation. No content, auth, or edit logic changed. */
+#page-usmle,#page-bb,#page-ninja{direction:ltr;text-align:left}
+#page-usmle .msh-usmle-card,#page-usmle .panel,#page-bb .panel,#page-ninja .panel{text-align:left}
+#page-usmle .pagehead,#page-bb .toolbar,#page-ninja .toolbar{direction:ltr}
+#page-usmle .tabs{justify-content:flex-start;direction:ltr}
+#page-usmle .msh-usmle-cta{white-space:normal}
+#page-usmle .msh-usmle-card{min-width:0}
+@media(max-width:768px){#page-usmle .tabs{display:flex;overflow-x:auto;flex-wrap:nowrap;gap:7px;padding-bottom:8px;scrollbar-width:thin}#page-usmle .tabs .tab{white-space:nowrap;flex-shrink:0}#page-usmle .pagehead{align-items:flex-start}}
+</style>
 </head>
 <body>
 <style>
@@ -986,81 +1235,56 @@ body{color:#172943;background:#f6f8fd!important}
 <!-- Master Sidebar: Re-engineered Primary Architecture (USMLE -> BB -> Ninja -> Other Sources) -->
 <aside class="sidebar">
   <div class="brand">
-    <div class="brandmark msh-no-placeholder" id="brandIcon" aria-hidden="true"></div>
+    <div class="brandmark msh-no-placeholder" id="brandIcon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16" fill="#2054D9"/><path d="M32 12v40M12 32h40" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M20 45l12 6 12-6" fill="none" stroke="#9ee8ff" stroke-width="3" stroke-linecap="round"/></svg></div>
     <div>
       <div class="brandname" id="brandName">MedStudy Hub</div>
       <small>MEDICAL LEARNING · USMLE</small>
     </div>
   </div>
   
-  <div class="navlabel">CORE PATHWAYS</div>
   <nav class="nav" id="mainNav">
-    <button class="active" data-page="home">
+<div class="msh-nav-label">WORKSPACE</div>
+<div class="msh-nav-primary"><button class="active" data-page="home">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-10.5z"/></svg></span>
-      <span class="navtext">الرئيسية</span>
-    </button>
-    <button data-page="usmle">
+      <span class="navtext">Home</span>
+    </button><button type="button" data-page="catalog"><span class="navicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20"/></svg></span><span class="navtext">Medical Library</span></button><button data-page="questions">
+      <span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+      <span class="navtext">Question Bank</span>
+    </button><button type="button" data-page="studyhub"><span class="navicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></span><span class="navtext">Study Resources</span></button></div>
+<details class="msh-nav-group" data-msh-nav-group="sources"><summary>LEARNING SOURCES<span aria-hidden="true">⌄</span></summary><div class="msh-nav-sub"><button data-page="usmle">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1z"/><path d="M12 6v14M15 11l2 2 3-4"/></svg></span>
       <span class="navtext">USMLE Center</span>
       <span class="navbadge">Step 1–3</span>
-    </button>
-    <button data-page="bb">
+    </button><button data-page="bb">
       <span class="navicon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
       <span class="navtext">Boards & Beyond</span>
       <span class="navbadge">B&B</span>
-    </button>
-    <button data-page="ninja">
+    </button><button data-page="ninja">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
       <span class="navtext">Ninja Nerd</span>
       <span class="navbadge">NK</span>
-    </button>
-    <button data-page="sources">
+    </button><button data-page="sources">
       <span class="navicon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="7" y1="16" x2="12" y2="16"/></svg></span>
       <span class="navtext">مصادر تعليمية أخرى</span>
-    </button>
-    
-    <div class="navlabel">ACADEMIC MODULES</div>
-    <button data-page="lectures">
+    </button><button data-page="lectures">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
       <span class="navtext">Academic Library</span>
-    </button>
-        <!-- Consolidated under Academic Library. The books route and CMS remain intact. -->
-    <button data-page="anatomy3d"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7L12 2zM3 7l9 6 9-6M12 13v9"/></svg></span><span class="navtext">Anatomy 3D Atlas</span><span class="navbadge">3D</span></button>
-    <button data-page="questions">
-      <span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-      <span class="navtext">Question Bank</span>
-    </button>
-    <button data-page="flashcards">
+    </button><button type="button" data-page="books"><span class="navicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4.5h7v15H3zM10 6h7v13h-7zM17 8h4v11h-4z"/></svg></span><span class="navtext">Medical Books</span></button><button data-page="anatomy3d"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7L12 2zM3 7l9 6 9-6M12 13v9"/></svg></span><span class="navtext">Anatomy 3D Atlas</span><span class="navbadge">3D</span></button></div></details><details class="msh-nav-group" data-msh-nav-group="tools"><summary>STUDY TOOLS<span aria-hidden="true">⌄</span></summary><div class="msh-nav-sub"><button data-page="flashcards">
       <span class="navicon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
       <span class="navtext">Flashcards</span>
-    </button>
-    
-    <div class="navlabel">SMART STUDY</div>
-    <button data-page="review"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5 4 3 7-8M14 7h6v6"/></svg></span><span class="navtext">مركز المراجعة الذكية</span></button>
-    <button data-page="focus"><span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13V8M10 2h4"/></svg></span><span class="navtext">جلسة التركيز</span></button>
-    <div class="navlabel">PERSONAL STUDY</div>
-    <button data-page="planner"><span class="navicon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3"/></svg></span><span class="navtext">Study Planner</span></button>
-    <button data-page="mistakes"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l10-10 3 3-10 10-4 1z"/></svg></span><span class="navtext">Mistakes Notebook</span></button>
-    <button data-page="bookmarks"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span><span class="navtext">Smart Bookmarks</span></button>
-    <div class="navlabel">INTELLIGENT STUDIO</div>
-    <button data-page="ai">
+    </button><button data-page="review"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M4 17l5-5 4 3 7-8M14 7h6v6"/></svg></span><span class="navtext">مركز المراجعة الذكية</span></button><button data-page="focus"><span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13V8M10 2h4"/></svg></span><span class="navtext">جلسة التركيز</span></button><button data-page="planner"><span class="navicon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3"/></svg></span><span class="navtext">Study Planner</span></button><button data-page="mistakes"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l10-10 3 3-10 10-4 1z"/></svg></span><span class="navtext">Mistakes Notebook</span></button><button data-page="bookmarks"><span class="navicon"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span><span class="navtext">Smart Bookmarks</span></button><button data-page="ai">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6L12 2z"/></svg></span>
       <span class="navtext">المساعد الدراسي AI</span>
-    </button>
-    <button data-page="mylibrary">
+    </button></div></details><details class="msh-nav-group" data-msh-nav-group="personal"><summary>MY SPACE<span aria-hidden="true">⌄</span></summary><div class="msh-nav-sub"><button data-page="mylibrary">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
       <span class="navtext">My Library</span>
-    </button>
-    <button data-page="progress">
+    </button><button data-page="progress">
       <span class="navicon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
       <span class="navtext">Progress & Analytics</span>
-    </button>
-    <button data-page="profile"><span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="navtext">حسابي والخصوصية</span></button>
-    <button data-page="community">
+    </button><button data-page="profile"><span class="navicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="navtext">حسابي والخصوصية</span></button><button data-page="community">
       <span class="navicon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
       <span class="navtext">Medical Community</span>
-    </button>
-  </nav>
+    </button></div></details></nav>
   
   <div class="sidebottom">
     <div class="profilemini" style="cursor:pointer" data-action="open-auth">
@@ -1078,7 +1302,7 @@ body{color:#172943;background:#f6f8fd!important}
   <!-- Top Header with prominent Logo, Title & Unified Student Login -->
   <header class="topbar">
     <div class="topbrand">
-      <div class="topbrand-logo msh-no-placeholder" id="headerLogoBox" title="شعار المنصة" aria-hidden="true"></div>
+      <div class="topbrand-logo msh-no-placeholder" id="headerLogoBox" title="شعار المنصة" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16" fill="#2054D9"/><path d="M32 12v40M12 32h40" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M20 45l12 6 12-6" fill="none" stroke="#9ee8ff" stroke-width="3" stroke-linecap="round"/></svg></div>
       <div class="topbrand-info">
         <div class="topbrand-title">
           <span id="headerBrandTitle">MedStudy Hub</span>
@@ -1092,6 +1316,7 @@ body{color:#172943;background:#f6f8fd!important}
       <button class="iconbtn" data-page="mylibrary" title="مكتبتي الخاصة"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
       <button class="iconbtn" data-page="progress" title="تحليلات الأداء"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></button>
       <button class="auth-pill" id="topAuthBtn" data-action="open-auth"><span id="topAuthText">تسجيل الدخول</span></button>
+      <button type="button" class="msh-staff-shortcut" data-page="admin" hidden>Content Management</button>
     </div>
   </header>
 
@@ -1102,37 +1327,48 @@ body{color:#172943;background:#f6f8fd!important}
 
     <!-- PAGE: Home (3D Anatomical Command Center — Zero Duplication with USMLE Grid) -->
     <section class="page active" id="page-home">
-      <div class="msh-guest-home" id="mshGuestHome">
+      <div class="msh-guest-home" id="mshGuestHome" dir="ltr">
         <div class="msh-guest-hero">
           <div class="msh-guest-copy">
-            <span class="msh-eyebrow">MEDSTUDY HUB</span>
-            <h1>تعلّم الطب بوضوح. من الأساسيات إلى USMLE.</h1>
-            <p>منصة واحدة للمحاضرات، المسارات الطبية، بنك الأسئلة والبطاقات التعليمية. تصفّح المحتوى وجرّب الاختبارات دون حساب؛ أنشئ حسابًا فقط عندما تريد حفظ تقدمك.</p>
+            <span class="msh-eyebrow"><span class="msh-live-dot" aria-hidden="true"></span> YOUR COMPLETE MEDICAL LEARNING SPACE</span>
+            <h1>Medicine, made <em>simpler.</em></h1>
+            <p>Everything you need to learn medicine with clarity. Explore trusted learning sources, organize your studies, and practice at your own pace.</p>
             <div class="msh-guest-actions">
-              <button class="btn primary" data-page="usmle">استكشف مسارات USMLE</button>
-              <button class="btn outline" data-page="books">تصفح الكتب العلمية</button>
-              <button class="btn outline" data-action="open-auth">تسجيل الدخول</button>
+              <button type="button" class="btn primary" data-page="catalog">Start learning free <span aria-hidden="true">→</span></button>
+              <button type="button" class="btn outline" id="mshExploreBtn">Explore more <span aria-hidden="true">↓</span></button>
             </div>
+            <p class="msh-hero-footnote">Browse lectures and practice without an account. Sign in only to save your progress.</p>
           </div>
-          
+          <div class="msh-hero-deco msh-hero-deco-a" aria-hidden="true"></div>
+          <div class="msh-hero-deco msh-hero-deco-b" aria-hidden="true"></div>
         </div>
-        <div class="msh-guest-metrics" aria-label="محتوى المنصة">
-          <div><strong id="mshGuestSubjects">—</strong><span>مادة ومسار</span></div>
-          <div><strong id="mshGuestLectures">—</strong><span>محاضرة منشورة</span></div>
-          <div><strong id="mshGuestQuestions">—</strong><span>سؤال تدريبي</span></div>
-          <div><strong id="mshGuestCards">—</strong><span>بطاقة تعليمية</span></div>
+        <div class="msh-guest-metrics" aria-label="Published learning resources">
+          <div><strong id="mshGuestSubjects">—</strong><span>Subjects &amp; pathways</span></div>
+          <div><strong id="mshGuestLectures">—</strong><span>Published lectures</span></div>
+          <div><strong id="mshGuestQuestions">—</strong><span>Practice questions</span></div>
         </div>
-        <div class="msh-section-heading"><div><span class="msh-eyebrow">EXPLORE THE PLATFORM</span><h2>ابدأ من القسم الذي تحتاجه</h2></div></div>
-        <div class="msh-guest-grid">
-          <button class="msh-guest-tile" data-page="usmle"><span class="msh-tile-number">01</span><strong>USMLE Center</strong><span>Step 1 · Step 2 CK · Step 3</span><span class="msh-tile-link">فتح المسار ←</span></button>
-          <button class="msh-guest-tile" data-page="bb"><span class="msh-tile-number">02</span><strong>Boards & Beyond</strong><span>مواد ومراجعات منظمة</span><span class="msh-tile-link">تصفح السلاسل ←</span></button>
-          <button class="msh-guest-tile" data-page="ninja"><span class="msh-tile-number">03</span><strong>Ninja Nerd</strong><span>شرح الآليات والأنظمة الطبية</span><span class="msh-tile-link">تصفح الشروحات ←</span></button>
-          <button class="msh-guest-tile" data-page="questions"><span class="msh-tile-number">04</span><strong>Question Bank</strong><span>حل أسئلة دون حفظ النتائج</span><span class="msh-tile-link">ابدأ الاختبار ←</span></button>
-          <button class="msh-guest-tile" data-page="flashcards"><span class="msh-tile-number">05</span><strong>Flashcards</strong><span>بطاقات تقلب بالنقر</span><span class="msh-tile-link">راجع البطاقات ←</span></button>
-          <button class="msh-guest-tile" data-page="books"><span class="msh-tile-number">06</span><strong>Scientific Books</strong><span>Medical textbooks &amp; references</span><span class="msh-tile-link">تصفح الكتب العلمية ←</span></button>
-        <button class="msh-guest-tile msh-anat-home-tile" data-page="anatomy3d"><span class="msh-tile-number">07 &middot; INTERACTIVE ATLAS</span><strong>Anatomy 3D Studio</strong><span>Named meshes &middot; regions &middot; structures &middot; clinical cards</span><span class="msh-tile-link">Open interactive anatomy</span></button>
-        </div>
-        <div class="msh-guest-note"><strong>متى تحتاج حسابًا؟</strong> عند حفظ تقدمك أو نتائج الاختبارات أو بناء مكتبتك الخاصة. لن تظهر لوحة الطالب للزائر.</div>
+        <section id="mshExploreMore" class="msh-explore-section" aria-labelledby="mshExploreTitle">
+          <div class="msh-section-heading">
+            <div><span class="msh-eyebrow">EXPLORE MORE</span><h2 id="mshExploreTitle">Your learning space, thoughtfully organized.</h2><p>Choose where to begin. Every resource is just a few steps away.</p></div>
+          </div>
+          <div class="msh-guest-grid">
+            <button type="button" class="msh-guest-tile msh-feature-main" data-page="catalog">
+              <div class="msh-feature-text"><span class="msh-feature-kicker">01 · LEARN</span><strong>Medical Library</strong><span>Lectures, anatomy, books, USMLE and your favorite medical learning sources — all in one organized catalog.</span><span class="msh-tile-link">Explore the library <b aria-hidden="true">↗</b></span></div>
+              <div class="msh-feature-visual msh-feature-visual-library" data-msh-asset="home:library" aria-hidden="true">
+                <svg viewBox="0 0 440 290" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mshbk" x1="90" y1="50" x2="300" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#DCE9FF"/></linearGradient><filter id="mshshadow"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#1646A0" flood-opacity=".15"/></filter></defs><circle cx="300" cy="135" r="122" fill="#DDEAFF" opacity=".68"/><circle cx="290" cy="130" r="85" stroke="#B9D0FB" stroke-width="2" stroke-dasharray="5 9"/><g filter="url(#mshshadow)"><rect x="100" y="58" width="230" height="179" rx="16" fill="url(#mshbk)" stroke="#C7D8F7"/><rect x="123" y="81" width="183" height="132" rx="9" fill="white"/><path d="M154 117c17-23 44-27 62-10 18-17 45-13 62 10v69c-21-14-44-15-62 0-18-15-41-14-62 0v-69Z" fill="#E9F1FF" stroke="#3971E5" stroke-width="4"/><path d="M216 107v79" stroke="#3971E5" stroke-width="3"/><path d="M171 130h27M171 144h24M233 130h27M233 144h24" stroke="#93B2EC" stroke-width="3" stroke-linecap="round"/><rect x="263" y="45" width="80" height="39" rx="12" fill="#2454D3"/><path d="M288 64h30M303 49v30" stroke="white" stroke-width="5" stroke-linecap="round"/></g><circle cx="107" cy="200" r="20" fill="#D8E7FF"/><circle cx="357" cy="204" r="11" fill="#96B7F6"/></svg>
+              </div>
+            </button>
+            <button type="button" class="msh-guest-tile msh-feature-small" data-page="questions">
+              <div class="msh-feature-visual msh-feature-visual-practice" data-msh-asset="home:practice" aria-hidden="true"><svg viewBox="0 0 360 210" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="260" cy="105" r="94" fill="#DBE9FF"/><rect x="94" y="26" width="168" height="164" rx="17" fill="white" stroke="#BFD1F4" stroke-width="3"/><rect x="117" y="51" width="88" height="11" rx="5" fill="#B9CFF6"/><rect x="117" y="73" width="120" height="7" rx="3" fill="#E4ECFA"/><rect x="117" y="95" width="18" height="18" rx="5" fill="#E4EDFF" stroke="#7FA5EC"/><path d="m121 103 5 5 9-11" stroke="#2454D3" stroke-width="3" stroke-linecap="round"/><path d="M149 104h85M149 110h50" stroke="#B6C9E9" stroke-width="5" stroke-linecap="round"/><rect x="117" y="128" width="18" height="18" rx="5" fill="#E4EDFF" stroke="#7FA5EC"/><path d="M149 137h72M149 143h55" stroke="#B6C9E9" stroke-width="5" stroke-linecap="round"/><circle cx="269" cy="151" r="29" fill="#2454D3"/><path d="m257 150 9 9 16-19" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="msh-feature-text"><span class="msh-feature-kicker">02 · PRACTICE</span><strong>Practice &amp; Exams</strong><span>Build confidence with questions, clinical scenarios, and guided assessments.</span><span class="msh-tile-link">Start practicing <b aria-hidden="true">↗</b></span></div>
+            </button>
+            <button type="button" class="msh-guest-tile msh-feature-small" data-page="studyhub">
+              <div class="msh-feature-visual msh-feature-visual-study" data-msh-asset="home:study" aria-hidden="true"><svg viewBox="0 0 360 210" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="180" cy="104" r="94" fill="#DBE9FF"/><g transform="rotate(-9 185 108)"><rect x="101" y="39" width="174" height="129" rx="16" fill="#C8DAFF" stroke="#91B0F0" stroke-width="3"/></g><g transform="rotate(6 181 109)"><rect x="91" y="43" width="180" height="130" rx="16" fill="white" stroke="#C0D4F5" stroke-width="3"/><rect x="114" y="66" width="86" height="9" rx="4" fill="#9DBBEE"/><path d="M114 92h129M114 107h112M114 122h122" stroke="#D3E1F9" stroke-width="8" stroke-linecap="round"/><rect x="208" y="143" width="42" height="14" rx="7" fill="#2454D3"/></g><circle cx="272" cy="57" r="28" fill="#2454D3"/><path d="m272 43 3.6 10.4L286 57l-10.4 3.6L272 71l-3.6-10.4L258 57l10.4-3.6L272 43Z" fill="white"/></svg></div>
+              <div class="msh-feature-text"><span class="msh-feature-kicker">03 · GROW</span><strong>Study Resources</strong><span>Flashcards, study plans, review tools, and your AI study companion.</span><span class="msh-tile-link">Explore study tools <b aria-hidden="true">↗</b></span></div>
+            </button>
+          </div>
+        </section>
+        <div class="msh-guest-note">No account required to browse. Create one when you want to save notes, results, or progress.</div>
       </div>
       <div class="msh-member-home" id="mshMemberHome">
         <div id="mshV10Dashboard" class="msh-v10-dashboard" aria-label="لوحة الطالب الشخصية" hidden></div>
@@ -1277,22 +1513,60 @@ body{color:#172943;background:#f6f8fd!important}
     </section>
 
     <!-- PAGE: USMLE Center (Primary Academic Hub with Step 1, Step 2 CK, Step 3 & Academic Years) -->
+
+    <!-- V31: calm academic catalog; all existing learning source pages remain independent. -->
+    <section class="page msh-premium-page" id="page-catalog" dir="ltr">
+      <div class="msh-page-breadcrumb"><button type="button" data-page="home">Home</button><span>/</span><strong>Medical Library</strong></div>
+      <div class="msh-catalog-heading"><div><span class="msh-eyebrow">DISCOVER &amp; LEARN</span><h1>Medical Library</h1><p>Find lectures, references, anatomy resources and complete medical learning pathways.</p></div><button class="msh-search-top" type="button" data-action="quick-search">Search all resources ↗</button></div>
+      <label class="msh-catalog-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input type="search" id="mshCatalogSearch" autocomplete="off" placeholder="Search the catalog, sources or subjects…" aria-label="Search catalog"></label>
+      <div class="msh-catalog-filters" role="group" aria-label="Filter learning resources"><button type="button" class="active" data-msh-catalog-filter="all" aria-pressed="true">All resources</button><button type="button" data-msh-catalog-filter="source" aria-pressed="false">Learning sources</button><button type="button" data-msh-catalog-filter="academic" aria-pressed="false">Academic resources</button></div>
+      <div class="msh-catalog-section-label"><h2>Learning sources</h2><p>Choose a source to browse its subjects and lessons.</p></div>
+      <div class="msh-catalog-source-grid">
+        <button type="button" class="msh-source-card" data-msh-catalog-item="source" data-msh-search="usmle center step 1 step 2 ck step 3 medical curriculum" data-page="usmle"><span class="msh-source-emblem">U<span>+</span></span><span class="msh-source-copy"><strong>USMLE Center</strong><small>Step 1 · Step 2 CK · Step 3</small></span><span class="msh-card-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" class="msh-source-card" data-msh-catalog-item="source" data-msh-search="boards beyond b&b videos lectures study" data-page="bb"><span class="msh-source-emblem msh-emblem-bb">B<span>&amp;</span>B</span><span class="msh-source-copy"><strong>Boards &amp; Beyond</strong><small>Organized courses &amp; lectures</small></span><span class="msh-card-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" class="msh-source-card" data-msh-catalog-item="source" data-msh-search="ninja nerd nk physiology videos learning" data-page="ninja"><span class="msh-source-emblem msh-emblem-nn">NN</span><span class="msh-source-copy"><strong>Ninja Nerd</strong><small>Detailed medical science lessons</small></span><span class="msh-card-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <div class="msh-catalog-section-label"><h2>Academic resources</h2><p>Explore the rest of your medical curriculum.</p></div>
+      <div class="msh-catalog-resource-grid">
+        <button type="button" class="msh-resource-card" data-msh-catalog-item="academic" data-msh-search="academic library lectures pdf slides documents subjects" data-page="lectures"><span class="msh-resource-icon">▤</span><span><strong>Lectures &amp; PDFs</strong><small>Academic lectures, slides and files</small></span><span class="msh-card-arrow">↗</span></button>
+        <button type="button" class="msh-resource-card" data-msh-catalog-item="academic" data-msh-search="medical books scientific references textbook" data-page="books"><span class="msh-resource-icon">▥</span><span><strong>Books &amp; References</strong><small>Medical textbooks and resources</small></span><span class="msh-card-arrow">↗</span></button>
+        <button type="button" class="msh-resource-card" data-msh-catalog-item="academic" data-msh-search="anatomy 3d atlas models organ structures" data-page="anatomy3d"><span class="msh-resource-icon">◈</span><span><strong>Anatomy 3D Atlas</strong><small>Explore interactive anatomical systems</small></span><span class="msh-card-arrow">↗</span></button>
+        <button type="button" class="msh-resource-card" data-msh-catalog-item="academic" data-msh-search="other educational sources resources links" data-page="sources"><span class="msh-resource-icon">⊞</span><span><strong>Other Learning Sources</strong><small>Additional educational references</small></span><span class="msh-card-arrow">↗</span></button>
+      </div>
+      <p id="mshCatalogEmpty" class="msh-catalog-empty" hidden>No matching resources. Try a different search.</p>
+    </section>
+    <section class="page msh-premium-page" id="page-studyhub" dir="ltr">
+      <div class="msh-page-breadcrumb"><button type="button" data-page="home">Home</button><span>/</span><strong>Study Resources</strong></div>
+      <div class="msh-catalog-heading"><div><span class="msh-eyebrow">STUDY SMARTER</span><h1>Study Resources</h1><p>Focused tools for active recall, planning, revision and independent study.</p></div></div>
+      <div class="msh-studyhub-grid">
+        <button type="button" data-page="flashcards"><span class="msh-resource-icon">▣</span><strong>Flashcards</strong><small>Practice active recall. Guest access available.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="review"><span class="msh-resource-icon">↻</span><strong>Smart Review</strong><small>Review your progress and weak areas.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="planner"><span class="msh-resource-icon">▦</span><strong>Study Planner</strong><small>Plan lessons and track your tasks.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="focus"><span class="msh-resource-icon">◷</span><strong>Focus Sessions</strong><small>Keep your study sessions intentional.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="mistakes"><span class="msh-resource-icon">✎</span><strong>Mistakes Notebook</strong><small>Record and revisit missed concepts.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="bookmarks"><span class="msh-resource-icon">☆</span><strong>Smart Bookmarks</strong><small>Return to saved resources quickly.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="ai"><span class="msh-resource-icon">✧</span><strong>AI Tutor</strong><small>Ask questions and study with guidance.</small><span class="msh-card-arrow">↗</span></button>
+        <button type="button" data-page="mylibrary"><span class="msh-resource-icon">▤</span><strong>My Library</strong><small>View your saved materials and resources.</small><span class="msh-card-arrow">↗</span></button>
+      </div>
+      <div class="msh-studyhub-note">Browsing and public flashcards are available to guests. Personal tools require sign-in to save your data.</div>
+    </section>
+
     <section class="page" id="page-usmle">
       <div class="pagehead">
         <div>
           <div class="eyebrow">PRIMARY ACADEMIC ARCHITECTURE</div>
           <h1>USMLE & Medical Curriculum Center</h1>
-          <p>الهيكل الأكاديمي الموحد: تصفح المواد حسب مراحل USMLE (Step 1, 2 CK, 3) أو حسب التصنيف الأكاديمي والأجهزة.</p>
+          <p>Explore medical subjects by USMLE stage, academic discipline, or organ system.</p>
         </div>
         <div class="toolbar" style="margin:0">
-          <input class="field search" id="usmleSearch" placeholder="ابحث عن مادة، جهاز، أو تخصص سريري...">
+          <input class="field search" id="usmleSearch" placeholder="Search subjects, organ systems, or clinical specialties...">
         </div>
       </div>
       <div class="tabs">
         <button class="tab active" data-step="step1">USMLE Step 1 (Foundational & Systems)</button>
         <button class="tab" data-step="step2">USMLE Step 2 CK (Clinical Medicine)</button>
         <button class="tab" data-step="step3">USMLE Step 3 & CCS Simulator</button>
-        <button class="tab" data-step="years">التنظيم الأكاديمي والسنوات</button>
+        <button class="tab" data-step="years">Academic Years</button>
       </div>
       <div id="usmleContent"></div>
     </section>
@@ -1303,14 +1577,14 @@ body{color:#172943;background:#f6f8fd!important}
         <div>
           <div class="eyebrow">PRIMARY EDUCATIONAL SOURCE · B&B</div>
           <h1>Boards & Beyond Workspace</h1>
-          <p>المدخل الرئيسي المستقل لسلاسل Boards & Beyond. جميع الفيديوهات، ملفات الـ PDF، والأسئلة التدريبية المرتبطة بكل مادة وجهاز حيوي في مكان واحد.</p>
+          <p>An independent, organized library for Boards & Beyond lectures, PDFs, and practice resources across medical sciences and organ systems.</p>
         </div>
         
       </div>
       <div class="toolbar">
-        <input class="field search" id="bbSearch" placeholder="ابحث داخل محتوى ومواد Boards & Beyond...">
+        <input class="field search" id="bbSearch" placeholder="Search Boards & Beyond courses and resources...">
         <select class="field" id="bbFilterGroup">
-          <option value="all">كل الأقسام (Basic & Systems)</option>
+          <option value="all">All subjects (Basic & Systems)</option>
           <option value="Basic Sciences">Basic Medical Sciences</option>
           <option value="Organ Systems">Organ Systems</option>
           <option value="Clinical Medicine">Clinical Step 2</option>
@@ -1325,14 +1599,14 @@ body{color:#172943;background:#f6f8fd!important}
         <div>
           <div class="eyebrow">PRIMARY EDUCATIONAL SOURCE · NINJA NERD (NK)</div>
           <h1>Ninja Nerd Medical Science Hub</h1>
-          <p>المساحة المخصصة لشروحات Ninja Nerd المعمّقة: الفسيولوجيا الدقيقة، الكيمياء الحيوية، المناعة، والأمراض مع ربط مباشر ببنك الأسئلة والبطاقات.</p>
+          <p>A dedicated library for in-depth Ninja Nerd lessons in physiology, biochemistry, immunology, pathology, and related practice resources.</p>
         </div>
         
       </div>
       <div class="toolbar">
-        <input class="field search" id="ninjaSearch" placeholder="ابحث في شروحات ومواد Ninja Nerd...">
+        <input class="field search" id="ninjaSearch" placeholder="Search Ninja Nerd lessons and topics...">
         <select class="field" id="ninjaFilterGroup">
-          <option value="all">كل التخصصات</option>
+          <option value="all">All subjects</option>
           <option value="Basic Sciences">Basic Sciences</option>
           <option value="Organ Systems">Organ Systems</option>
         </select>
@@ -1625,7 +1899,7 @@ body{color:#172943;background:#f6f8fd!important}
     <section class="page" id="page-books">
       <div class="pagehead"><div><span class="tag">MEDICAL REFERENCE LIBRARY</span><h1>مكتبة الكتب الطبية</h1><p>كتب ومراجع متاحة للجميع للقراءة. حفظ الكتب في مكتبتي يتطلب تسجيل الدخول.</p></div></div>
       <div class="msh-academic-switch" role="navigation" aria-label="Academic library sections"><button type="button" class="msh-library-tab" data-page="lectures">Lectures &amp; PDFs</button><button type="button" class="msh-library-tab active" data-page="books" aria-current="page">Medical books &amp; references</button></div>
-      <div class="toolbar"><input class="field search" id="mshBookSearch" placeholder="ابحث باسم الكتاب أو المؤلف أو المادة..." oninput="mshRenderBooks()"><select class="field" id="mshBookSubject" onchange="mshRenderBooks()"><option value="">كل التخصصات</option></select></div>
+      <div class="toolbar"><input class="field search" id="mshBookSearch" placeholder="ابحث باسم الكتاب أو المؤلف أو المادة..." oninput="mshRenderBooks()"><select class="field" id="mshBookSubject" onchange="mshRenderBooks()"><option value="">All subjects</option></select></div>
       <div class="msh-books-grid" id="mshBooksGrid"></div>
     </section>
 
@@ -1756,33 +2030,23 @@ body{color:#172943;background:#f6f8fd!important}
   <!-- Site footer: branding only; no private backdoors -->
   <footer class="site-footer">
     <div class="footer-brand">
-      <div class="msh-footer-mark" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#AFC5F8" stroke-width="2.2"><path d="M12 2v20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
-      </div>
       <div>
         <b style="font-size:12.5px;display:block" id="footerBrandName">MedStudy Hub — Medical Education Platform</b>
         <span class="footer-meta">One Workspace. Every Step. Every Specialty.</span>
       </div>
     </div>
-    <div class="footer-links">
-      <button class="textbtn" data-page="usmle">USMLE Center</button>
-      <button class="textbtn" data-page="bb">Boards & Beyond</button>
-      <button class="textbtn" data-page="ninja">Ninja Nerd</button>
-      <button class="textbtn" data-page="sources">مصادر أخرى</button>
-      <button class="textbtn" data-page="questions">Question Bank</button>
-    </div>
+    <div class="footer-links"><button class="textbtn" data-page="catalog">Medical Library</button><button class="textbtn" data-page="questions">Practice</button><button class="textbtn" data-page="studyhub">Study Resources</button></div>
   </footer>
 </main>
 </div>
 
 <!-- Mobile Bottom Navigation Bar (Clean SVG Icons - Zero Emojis) -->
-<nav class="mobilebar" aria-label="التنقل السريع على الهاتف">
-  <button class="active" data-page="home"><span>▣</span>الرئيسية</button>
-  <button data-page="usmle"><span aria-hidden="true">◎</span>USMLE</button>
-  <button data-page="questions"><span>Q</span>الأسئلة</button>
-  <button data-page="flashcards"><span>◫</span>البطاقات</button>
-  <button data-page="mylibrary"><span>★</span>مكتبتي</button>
-  <button type="button" id="mshMobileOpen" aria-haspopup="dialog" aria-controls="mshMobileDrawer" aria-expanded="false"><span>☷</span>القائمة</button>
+<nav class="mobilebar" aria-label="Mobile quick navigation">
+  <button type="button" class="active" data-page="home"><span>⌂</span>Home</button>
+  <button type="button" data-page="catalog"><span>▤</span>Library</button>
+  <button type="button" data-page="questions"><span>✓</span>Practice</button>
+  <button type="button" data-page="studyhub"><span>▧</span>Study</button>
+  <button type="button" id="mshMobileOpen" aria-haspopup="dialog" aria-controls="mshMobileDrawer" aria-expanded="false"><span>☰</span>Menu</button>
 </nav>
 <div class="msh-mobile-layer" id="mshMobileDrawer" role="dialog" aria-modal="true" aria-label="جميع أقسام المنصة" hidden>
   <div class="msh-mobile-backdrop" data-msh-close-drawer></div>
@@ -2083,7 +2347,9 @@ let uiTexts = read('uiTexts', {
 
 
 const pageNames = {
-  home: 'الرئيسية',
+  home: 'Home',
+  catalog: 'Medical Library',
+  studyhub: 'Study Resources',
   books: 'مكتبة الكتب الطبية',
   anatomy3d: 'Anatomy 3D Atlas',
   usmle: 'USMLE Center',
@@ -2815,17 +3081,17 @@ function openSubjectDetail(name, activeTab = 'overview') {
             <div class="activityitem" data-msh-subject="${esc(name)}" data-msh-tab="questions">
               <div class="sourceavatar">QB</div>
               <div><b>بنك أسئلة المادة</b><small>${qs.length} سؤال إكلينيكي مع التفسير</small></div>
-              <span class="tail">فتح ←</span>
+              <span class="tail">Open →</span>
             </div>
             <div class="activityitem" data-msh-subject="${esc(name)}" data-msh-tab="lectures">
               <div class="sourceavatar">LC</div>
               <div><b>المحاضرات والملفات</b><small>${ls.length} ملفات وسلايدات منشورة</small></div>
-              <span class="tail">فتح ←</span>
+              <span class="tail">Open →</span>
             </div>
             <div class="activityitem" data-msh-subject="${esc(name)}" data-msh-tab="resources">
               <div class="sourceavatar">SR</div>
               <div><b>المصادر المرجعية</b><small>${sources.length} مصادر مرتبطة بالمادة</small></div>
-              <span class="tail">فتح ←</span>
+              <span class="tail">Open →</span>
             </div>
           </div>
         </div>
@@ -3200,18 +3466,18 @@ function renderHome() {
     <div class="sourceitem" onclick="openLectureDetail('${l.id}')">
       <div class="sourceavatar">${esc((l.type || 'PDF').slice(0, 3))}</div>
       <div><b>${esc(l.title)}</b><small>${esc(l.source || 'USMLE')} · ${esc(l.subject)} · ${esc(l.topic || 'General')}</small></div>
-      <span class="tail">فتح ←</span>
+      <span class="tail">Open →</span>
     </div>
   `).join('') : `
     <div class="sourceitem" onclick="go('bb')">
       <div class="sourceavatar">B&B</div>
       <div><b>Boards & Beyond Video Curriculum</b><small>تصفح السلاسل المرتبطة بـ Step 1 & Step 2</small></div>
-      <span class="tail">فتح ←</span>
+      <span class="tail">Open →</span>
     </div>
     <div class="sourceitem" onclick="go('ninja')">
       <div class="sourceavatar">NK</div>
       <div><b>Ninja Nerd Whiteboard Masterclasses</b><small>شروحات الفسيولوجيا والباثولوجيا التفصيلية</small></div>
-      <span class="tail">فتح ←</span>
+      <span class="tail">Open →</span>
     </div>
   `;
 }
@@ -3394,7 +3660,7 @@ function renderUSMLE() {
       <div class="msh-usmle-sections">
         <div class="panel msh-usmle-section">
           <h3>1. General Subjects (Basic Medical Sciences)</h3>
-          <p class="panel-sub">العلوم الطبية التأسيسية لـ USMLE Step 1</p>
+          <p class="panel-sub">Foundational medical sciences for USMLE Step 1.</p>
           <div class="msh-usmle-card-grid">
             ${genList.map(s => `
               <div class="catalogcard msh-usmle-card" data-msh-subject="${esc(s.name)}" role="button" tabindex="0">
@@ -3406,15 +3672,15 @@ function renderUSMLE() {
                 <p class="en-text">${esc(s.desc)}</p>
                 <div class="msh-usmle-card-foot">
                   <span class="msh-usmle-count">${questions.filter(q => q.subject === s.name && (q.sample||mshIsPublished(q))).length} Qs</span>
-                  <span class="msh-usmle-cta">استكشاف المادة ←</span>
+                  <span class="msh-usmle-cta">Explore subject →</span>
                 </div>
               </div>
-            `).join('') || '<div class="empty">لا توجد مواد مطابقة</div>'}
+            `).join('') || '<div class="empty">No matching subjects</div>'}
           </div>
         </div>
         <div class="panel msh-usmle-section">
           <h3>2. Organ Systems (3D Integrated Body Systems)</h3>
-          <p class="panel-sub">دراسة تكاملية لأجهزة الجسم (فسيولوجيا، باثولوجيا، فارماكولوجيا)</p>
+          <p class="panel-sub">Integrated organ systems: physiology, pathology, and pharmacology.</p>
           <div class="msh-usmle-card-grid">
             ${sysList.map(s => `
               <div class="catalogcard msh-usmle-card" data-msh-subject="${esc(s.name)}" role="button" tabindex="0">
@@ -3426,10 +3692,10 @@ function renderUSMLE() {
                 <p class="en-text">${esc(s.desc)}</p>
                 <div class="msh-usmle-card-foot">
                   <span class="msh-usmle-count">${questions.filter(q => q.subject === s.name && (q.sample||mshIsPublished(q))).length} Qs</span>
-                  <span class="msh-usmle-cta">استكشاف الجهاز ←</span>
+                  <span class="msh-usmle-cta">Explore system →</span>
                 </div>
               </div>
-            `).join('') || '<div class="empty">لا توجد أجهزة مطابقة</div>'}
+            `).join('') || '<div class="empty">No matching systems</div>'}
           </div>
         </div>
       </div>
@@ -3439,7 +3705,7 @@ function renderUSMLE() {
     html = `
       <div class="panel msh-usmle-section">
         <h3>USMLE Step 2 CK — Clinical Specialties & Rotations</h3>
-        <p class="panel-sub">التشخيص التفريقي، الفحوصات الاستقصائية، وبروتوكولات العلاج السريري.</p>
+        <p class="panel-sub">Differential diagnosis, clinical investigations, and evidence-based management.</p>
         <div class="msh-usmle-card-grid">
           ${clinList.map(s => `
             <div class="catalogcard msh-usmle-card" data-msh-subject="${esc(s.name)}" role="button" tabindex="0">
@@ -3451,7 +3717,7 @@ function renderUSMLE() {
               <p class="en-text">${esc(s.desc)}</p>
               <div class="msh-usmle-card-foot">
                 <span class="msh-usmle-count">Clinical</span>
-                <span class="msh-usmle-cta">استكشاف التخصص ←</span>
+                <span class="msh-usmle-cta">Explore specialty →</span>
               </div>
             </div>
           `).join('')}
@@ -3471,8 +3737,8 @@ function renderUSMLE() {
         <div class="catalogcard" onclick="go('ccs')" style="border-color:var(--cyan);background:#ecfeff">
           <span class="tag" style="background:#0891b2;color:#fff">STEP 3 · CCS SIMULATOR</span>
           <h3 style="margin-top:8px" class="en-text">Interactive CCS Case Simulator</h3>
-          <p>محاكاة الحالات السريرية التفاعلية: إصدار الأوامر، مراقبة العلامات الحيوية، وإعادة التقييم.</p>
-          <button class="btn primary" style="margin-top:10px">تشغيل محاكي CCS ←</button>
+          <p>Interactive clinical cases: order entry, monitoring, and reassessment.</p>
+          <button class="btn primary" style="margin-top:10px">Launch CCS Simulator →</button>
         </div>
       </div>
     `;
@@ -3480,20 +3746,20 @@ function renderUSMLE() {
     html = `
       <div class="layout2">
         <div class="panel">
-          <h3>السنوات التأسيسية (Basic Medical Years 1–3)</h3>
-          <p class="panel-sub">تنظيم مستقل حسب المراحل الدراسية والفصول (Semesters)</p>
+          <h3>Preclinical Years (1–3)</h3>
+          <p class="panel-sub">Foundational coursework organized by academic year and semester.</p>
           <div class="activityitems">
-            <div class="activityitem" onclick="openSubjectDetail('Biochemistry')"><div class="sourceavatar">Y1</div><div><b>Year 1 · Foundational Sciences</b><small>Biology, Organic Chemistry, Medical Physics, Terminology, Biochemistry</small></div><span class="tail">استعراض ←</span></div>
-            <div class="activityitem" onclick="openSubjectDetail('General Pathology')"><div class="sourceavatar">Y2</div><div><b>Year 2 · Pre-Clinical Core</b><small>Pathology, Pharmacology, Microbiology, Immunology, Genetics</small></div><span class="tail">استعراض ←</span></div>
-            <div class="activityitem" onclick="openSubjectDetail('Cardiovascular')"><div class="sourceavatar">Y3</div><div><b>Year 3 · Integrated Organ Systems</b><small>Cardiovascular, Respiratory, Renal, GI, Neuroscience, Endocrine</small></div><span class="tail">استعراض ←</span></div>
+            <div class="activityitem" onclick="openSubjectDetail('Biochemistry')"><div class="sourceavatar">Y1</div><div><b>Year 1 · Foundational Sciences</b><small>Biology, Organic Chemistry, Medical Physics, Terminology, Biochemistry</small></div><span class="tail">Explore →</span></div>
+            <div class="activityitem" onclick="openSubjectDetail('General Pathology')"><div class="sourceavatar">Y2</div><div><b>Year 2 · Pre-Clinical Core</b><small>Pathology, Pharmacology, Microbiology, Immunology, Genetics</small></div><span class="tail">Explore →</span></div>
+            <div class="activityitem" onclick="openSubjectDetail('Cardiovascular')"><div class="sourceavatar">Y3</div><div><b>Year 3 · Integrated Organ Systems</b><small>Cardiovascular, Respiratory, Renal, GI, Neuroscience, Endocrine</small></div><span class="tail">Explore →</span></div>
           </div>
         </div>
         <div class="panel">
-          <h3>السنوات السريرية (Clinical Years 4–6)</h3>
-          <p class="panel-sub">الدورات السريرية الكبرى والصغرى (Clinical Clerkships)</p>
+          <h3>Clinical Years (4–6)</h3>
+          <p class="panel-sub">Major and elective clinical rotations.</p>
           <div class="activityitems">
-            <div class="activityitem" onclick="openSubjectDetail('Internal Medicine')"><div class="sourceavatar">C1</div><div><b>Major Clinical Rotations</b><small>Internal Medicine, General Surgery, Pediatrics, OB/GYN</small></div><span class="tail">استعراض ←</span></div>
-            <div class="activityitem" onclick="go('ccs')"><div class="sourceavatar">C2</div><div><b>Sub-Internship & Emergency Simulation</b><small>Acute Care Management, Ethics, Medical Laws, CCS Cases</small></div><span class="tail">فتح ←</span></div>
+            <div class="activityitem" onclick="openSubjectDetail('Internal Medicine')"><div class="sourceavatar">C1</div><div><b>Major Clinical Rotations</b><small>Internal Medicine, General Surgery, Pediatrics, OB/GYN</small></div><span class="tail">Explore →</span></div>
+            <div class="activityitem" onclick="go('ccs')"><div class="sourceavatar">C2</div><div><b>Sub-Internship & Emergency Simulation</b><small>Acute Care Management, Ethics, Medical Laws, CCS Cases</small></div><span class="tail">Open →</span></div>
           </div>
         </div>
       </div>
@@ -7389,6 +7655,296 @@ if(document.readyState!=='loading'){mshRenderExamSidebar();}else document.addEve
   });
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mode)stopPicker();});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});else initialize();
+})();
+</script>
+<script id="msh-v31-premium-js">
+/* MedStudy Hub v31 — presentation-only enhancements layered over the original app.
+   Supabase auth, database CRUD, role verification, CMS, media and quizzes remain in the original script. */
+(() => {
+  'use strict';
+  const byId = id => document.getElementById(id);
+  const clean = value => typeof esc === 'function' ? esc(String(value ?? '')) : String(value ?? '').replace(/[&<>"']/g, v => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[v]));
+  const signedIn = () => Boolean(typeof activeSession !== 'undefined' && activeSession?.user?.id);
+  const staff = () => typeof isUserAdminOrOwner === 'function' && isUserAdminOrOwner();
+  const isPublished = r => typeof mshIsPublished === 'function' ? mshIsPublished(r) : ['published','active'].includes(String(r?.status||'').toLowerCase());
+  const dataset = () => typeof lectures === 'undefined' ? [] : lectures;
+  const isAllowed = page => typeof mshV10IsVisible === 'function' ? mshV10IsVisible(page) : true;
+  let catalogFilter = 'all';
+  let currentLecture = null;
+  let aiChatRoot = null;
+  let aiChatHome = null;
+  let previewOrigin = 'lectures';
+
+  function authShortcut() {
+    const btn = document.querySelector('.msh-staff-shortcut');
+    if (!btn) return;
+    btn.hidden = !staff();
+    btn.setAttribute('aria-hidden', String(btn.hidden));
+  }
+
+  function initLogo() {
+    for (const id of ['brandIcon','headerLogoBox']) {
+      const target = byId(id);
+      if (!target || target.querySelector('img,svg')) continue;
+      const img = document.createElement('img');
+      img.src = 'assets/medstudy-logo.svg';
+      img.alt = '';
+      img.decoding = 'async';
+      target.appendChild(img);
+    }
+  }
+
+  function applyCatalogFilter() {
+    const input = byId('mshCatalogSearch');
+    const query = String(input?.value || '').trim().toLocaleLowerCase();
+    const items = [...document.querySelectorAll('#page-catalog [data-msh-catalog-item]')];
+    let visible = 0;
+    items.forEach(item => {
+      const type = item.getAttribute('data-msh-catalog-item');
+      const allowed = catalogFilter === 'all' || catalogFilter === type;
+      const matches = !query || (item.getAttribute('data-msh-search') || item.textContent || '').toLocaleLowerCase().includes(query);
+      item.hidden = !(allowed && matches) || (item.dataset.page && !isAllowed(item.dataset.page));
+      if (!item.hidden) visible++;
+    });
+    document.querySelectorAll('#page-catalog [data-msh-catalog-filter]').forEach(button => {
+      const active = button.getAttribute('data-msh-catalog-filter') === catalogFilter;
+      button.setAttribute('aria-pressed', String(active));
+      button.classList.toggle('active', active);
+    });
+    const sourceTitle = document.querySelector('#page-catalog .msh-catalog-source-grid')?.previousElementSibling;
+    const academicTitle = document.querySelector('#page-catalog .msh-catalog-resource-grid')?.previousElementSibling;
+    if (sourceTitle) sourceTitle.hidden = !items.some(x => !x.hidden && x.dataset.mshCatalogItem === 'source');
+    if (academicTitle) academicTitle.hidden = !items.some(x => !x.hidden && x.dataset.mshCatalogItem === 'academic');
+    const empty = byId('mshCatalogEmpty');
+    if (empty) empty.hidden = visible > 0;
+  }
+
+  function dashboard() {
+    const host = byId('mshV10Dashboard');
+    if (!host) return;
+    host.hidden = !signedIn();
+    if (!signedIn()) { host.replaceChildren(); return; }
+    const user = activeSession.user;
+    const name = String(user.email || 'Student').split('@')[0].slice(0,42);
+    const lastRaw = (() => {try{return JSON.parse(localStorage.getItem('msh_v3_lastPage_' + user.id) || 'null');}catch{return null;}})();
+    const last = lastRaw && typeof pageNames === 'object' && pageNames[lastRaw.page] && lastRaw.page !== 'admin' ? lastRaw.page : 'catalog';
+    const events = typeof mshReadStudyEvents === 'function' ? mshReadStudyEvents() : [];
+    const today = new Date().toDateString();
+    const eventsToday = events.filter(e => new Date(e.at).toDateString() === today && ['question','flashcard'].includes(e.type));
+    const questionsDone = Number(typeof qAnswered !== 'undefined' ? qAnswered : 0) || 0;
+    const flashDone = Number(typeof fcReviewed !== 'undefined' ? fcReviewed : 0) || 0;
+    const saved = Array.isArray(typeof personal === 'undefined' ? null : personal) ? personal.length : 0;
+    const pct = Math.max(0, Math.min(100, Math.round(eventsToday.length / 20 * 100)));
+    host.innerHTML = `<div class="msh31-dashboard">
+      <section class="msh31-welcome"><span class="msh31-kicker">MY LEARNING SPACE</span><h2>Welcome back, ${clean(name)}.</h2>
+        <p>Pick up where you left off. Your lectures, practice and learning tools are organized in one focused workspace.</p>
+        <button type="button" data-page="${clean(last)}">Continue learning &nbsp; →</button></section>
+      <section class="msh31-today"><span class="msh31-kicker">TODAY'S STUDY</span><h3>A little progress every day.</h3><p>${eventsToday.length} learning activities recorded today on this device.</p><div class="msh31-meter" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="Daily activity goal"><i style="width:${pct}%"></i></div><small>${pct}% of your 20-activity daily goal</small><button type="button" class="msh31-today-link" data-page="planner">Open study planner &nbsp; ↗</button></section>
+      ${[
+        ['QUESTIONS ANSWERED', questionsDone, 'Practice smarter with targeted questions.', 'questions'],
+        ['FLASHCARDS REVIEWED', flashDone, 'Keep concepts fresh through active recall.', 'flashcards'],
+        ['SAVED RESOURCES', saved, 'Return to resources you have saved.', 'mylibrary']
+      ].map(([label,number,description,page])=>`<button class="msh31-summary" type="button" data-page="${page}"><span class="msh31-label">${label}</span><strong>${number}</strong><p>${description}</p><span class="msh-card-arrow" aria-hidden="true">Explore ↗</span></button>`).join('')}
+      ${staff() ? '<div class="msh31-staff-link"><button type="button" data-page="admin">Open Content Management ↗</button></div>' : ''}
+    </div>`;
+    authShortcut();
+  }
+
+  function safeHttps(value) {
+    if (!value || typeof value !== 'string') return '';
+    try {const url = new URL(value);return url.protocol === 'https:' ? url.toString() : '';}catch{return '';}
+  }
+  function youtubeEmbed(link) {
+    if (!link) return '';
+    try {
+      const url = new URL(link);
+      const host = url.hostname.toLowerCase();
+      let id = '';
+      if (host === 'youtu.be') id = url.pathname.slice(1).split('/')[0];
+      else if (['youtube.com','www.youtube.com','m.youtube.com','youtube-nocookie.com','www.youtube-nocookie.com'].includes(host)) {
+        id = (url.pathname.startsWith('/embed/') || url.pathname.startsWith('/shorts/')) ? url.pathname.split('/')[2] : (url.searchParams.get('v') || '');
+      }
+      return /^[\w-]{11}$/.test(id) ? 'https://www.youtube-nocookie.com/embed/' + id : '';
+    } catch { return ''; }
+  }
+  function lectureViewer(l) {
+    const url = safeHttps(l.url);
+    const youtube = youtubeEmbed(url);
+    const drive = typeof mshDrivePdfLink === 'function' ? mshDrivePdfLink(url) : null;
+    const type = String(l.type || '').toLowerCase();
+    if (youtube) return `<iframe title="${clean(l.title)} — video" src="${clean(youtube)}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    if (drive) return `<iframe title="${clean(l.title)} — PDF preview" src="${clean(drive.previewUrl)}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    if (url && (type.includes('video') || /\.mp4(?:$|\?)/i.test(url)) && /\.mp4(?:$|\?)/i.test(url)) return `<video controls preload="metadata" playsinline src="${clean(url)}"></video>`;
+    if (url && (/\.pdf(?:$|\?)/i.test(url) || (type.includes('pdf') && /\/storage\/v1\/object\//i.test(url)))) return `<iframe title="${clean(l.title)} — PDF" src="${clean(url)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    return `<div class="msh31-viewer-empty"><div class="msh31-file-glyph" aria-hidden="true">▤</div><strong>${url ? 'Your learning resource is ready.' : 'No preview available yet.'}</strong><p>${url ? 'This resource opens in its original source so its content and permissions remain unchanged.' : 'An online lecture file has not been linked to this record.'}</p>${url ? `<a class="msh31-lesson-link" href="${clean(url)}" target="_blank" rel="noopener noreferrer">Open original resource ↗</a>` : ''}</div>`;
+  }
+
+  function lessonTab(tab) {
+    const l = currentLecture;
+    const host = byId('msh31LessonPanel');
+    if (!host || !l) return;
+    document.querySelectorAll('[data-msh31-tab]').forEach(btn => btn.setAttribute('aria-selected', String(btn.dataset.msh31Tab === tab)));
+    const recorded = signedIn();
+    const subj = String(l.subject || 'General');
+    if (tab === 'overview') {
+      host.innerHTML = `<h3>Lecture overview</h3><p>${clean(l.topic || subj)} · ${clean(l.type || 'Learning resource')}</p><p>Study the material above, then use your learning tools for revision and practice.</p>${safeHttps(l.url) ? `<a class="msh31-lesson-link" href="${clean(safeHttps(l.url))}" target="_blank" rel="noopener noreferrer">Open original resource ↗</a>` : ''}${staff() && typeof mshCanManageContent === 'function' && mshCanManageContent('Lecture') ? `<div class="msh31-editor-line"><button type="button" class="msh31-editor-link" data-msh-v10-edit="lectures" data-id="${clean(l.id)}">Edit this lecture</button></div>` : ''}`;
+    } else if (tab === 'notes') {
+      if (!recorded) {host.innerHTML = '<h3>Lecture notes</h3><p>Sign in to keep private notes for this lesson.</p><button type="button" class="msh31-lesson-link" data-action="open-auth">Sign in to write notes ↗</button>';return;}
+      const key = 'msh31_notes_' + activeSession.user.id + '_' + String(l.id);
+      let value = '';try{value=localStorage.getItem(key)||'';}catch{}
+      host.innerHTML = `<h3>My lecture notes</h3><p>Private notes stored on this device for your signed-in account.</p><textarea class="msh31-notes" id="msh31LectureNotes" placeholder="Write your key takeaways, mnemonics or questions here..."></textarea><p class="msh31-notes-status" id="msh31NoteStatus">Saved on this device — not cloud synced</p>`;
+      byId('msh31LectureNotes').value = value;
+      byId('msh31LectureNotes').dataset.noteKey = key;
+    } else if (tab === 'flashcards') {
+      const matches = typeof flashcards !== 'undefined' ? flashcards.filter(f => (f.subject === subj) && (f.sample || isPublished(f))) : [];
+      host.innerHTML = `<h3>Flashcards</h3><p>${matches.length ? matches.length + ' cards available for ' + clean(subj) + '.' : 'There are no published cards linked directly to this subject yet.'}</p><button type="button" class="msh31-lesson-link" data-page="flashcards">Open flashcards ↗</button>`;
+    } else {
+      const matches = typeof questions !== 'undefined' ? questions.filter(q => q.subject === subj && (q.sample || isPublished(q))) : [];
+      host.innerHTML = `<h3>Practice &amp; quiz</h3><p>${matches.length ? matches.length + ' practice questions available for ' + clean(subj) + '.' : 'No published questions are linked directly to this subject yet.'}</p>${matches.length ? `<button type="button" class="msh31-lesson-link" data-msh31-subject-quiz="${clean(subj)}">Practice this subject ↗</button>` : '<button type="button" class="msh31-lesson-link" data-page="questions">Browse the question bank ↗</button>'}`;
+    }
+  }
+
+  function relatedLessons(l) {
+    const all = dataset().filter(isPublished);
+    const related = all.filter(r => String(r.subject||'').toLowerCase() === String(l.subject||'').toLowerCase());
+    return related.length > 1 ? related : [l];
+  }
+  function showLesson(id) {
+    const l = dataset().find(x => String(x.id) === String(id));
+    if (!l || !isPublished(l)) return;
+    closeAI();
+    const activePage = document.querySelector('.page.active')?.id.replace(/^page-/,'');
+    if (activePage) previewOrigin = activePage;
+    currentLecture = l;
+    const related = relatedLessons(l);
+    const index = Math.max(0, related.findIndex(x => String(x.id) === String(l.id)));
+    const prev = related[index-1]; const next = related[index+1];
+    const html = `<article class="msh31-lesson">
+      <header class="msh31-lesson-head"><div class="msh31-lesson-breadcrumb"><button type="button" data-msh31-back>← Back</button><span>/</span><span>${clean(l.subject || 'Medical Library')}</span></div><h1>${clean(l.title)}</h1><p>${clean(l.topic || l.subject || 'General')} · ${clean(l.type || 'Learning resource')}</p></header>
+      <div class="msh31-lesson-grid"><div class="msh31-lesson-main">
+        <div class="msh31-viewer">${lectureViewer(l)}</div>
+        <div class="msh31-lesson-tabs" role="tablist" aria-label="Lecture tools">
+          <button type="button" role="tab" data-msh31-tab="overview" aria-selected="true">Overview</button>
+          <button type="button" role="tab" data-msh31-tab="notes" aria-selected="false">Notes</button>
+          <button type="button" role="tab" data-msh31-tab="flashcards" aria-selected="false">Flashcards</button>
+          <button type="button" role="tab" data-msh31-tab="quiz" aria-selected="false">Quiz</button>
+        </div>
+        <section class="msh31-lesson-tabcontent" id="msh31LessonPanel" role="tabpanel"></section>
+        <div class="msh31-lesson-bottom"><button type="button" ${prev ? `data-msh31-open-lecture="${clean(prev.id)}"` : 'disabled'}>← Previous lesson</button><button type="button" ${next ? `data-msh31-open-lecture="${clean(next.id)}"` : 'disabled'}>Next lesson →</button></div>
+      </div><aside class="msh31-lesson-aside"><h3>Course contents</h3><p>Continue within ${clean(l.subject || 'this course')}.</p>
+        <div class="msh31-course-list">${related.slice(0,80).map((r,i)=>`<button type="button" data-msh31-open-lecture="${clean(r.id)}" class="${String(r.id)===String(l.id)?'active':''}"><span class="msh31-num">${String(i+1).padStart(2,'0')}</span><span>${clean(r.title)}</span></button>`).join('')}</div>
+        <button type="button" class="msh31-ai-trigger" data-msh31-open-ai>✧ &nbsp; Open AI Tutor</button>
+        <button type="button" class="msh31-save-resource" data-action="save-resource" data-id="${clean(l.id)}">☆ Save to My Library</button>
+      </aside></div>
+    </article>`;
+    openSubpageView(html, l.title);
+    lessonTab('overview');
+  }
+
+  function ensureAI() {
+    if (byId('msh31AiPanel')) return;
+    const backdrop = document.createElement('div'); backdrop.id='msh31AiBackdrop';backdrop.className='msh31-ai-backdrop';backdrop.hidden=true;
+    const panel = document.createElement('aside');panel.id='msh31AiPanel';panel.className='msh31-ai-panel';panel.hidden=true;panel.setAttribute('aria-label','AI Tutor');
+    panel.innerHTML = '<header class="msh31-ai-panel-head"><span>✧ &nbsp; AI Tutor · Study assistant</span><button type="button" data-msh31-close-ai aria-label="Close AI Tutor">Close ×</button></header><div class="msh31-ai-panel-host" id="msh31AiHost"></div>';
+    document.body.append(backdrop,panel);
+  }
+  function openAI() {
+    if (!signedIn()) {if (typeof showAuthDialog==='function') showAuthDialog('signin');return;}
+    ensureAI();
+    const chat = document.querySelector('#page-ai .msh-chat-shell');
+    if (chat) {aiChatRoot = chat;aiChatHome = chat.parentNode;byId('msh31AiHost').appendChild(chat);}
+    const input = byId('mshAiPrompt');
+    if (input && !input.value.trim() && currentLecture) input.placeholder = 'Ask about ' + currentLecture.title + '...';
+    byId('msh31AiBackdrop').hidden = false;
+    byId('msh31AiPanel').hidden = false;
+    document.body.classList.add('msh31-ai-open');
+    byId('msh31AiPanel').querySelector('[data-msh31-close-ai]')?.focus();
+  }
+  function closeAI() {
+    if (aiChatRoot && aiChatHome && aiChatHome.isConnected) aiChatHome.appendChild(aiChatRoot);
+    aiChatRoot = null; aiChatHome = null;
+    if (byId('msh31AiBackdrop')) byId('msh31AiBackdrop').hidden = true;
+    if (byId('msh31AiPanel')) byId('msh31AiPanel').hidden = true;
+    document.body.classList.remove('msh31-ai-open');
+  }
+
+  function groupedMobileNav() {
+    const host = byId('mshMobileItems');if (!host) return;
+    const all = new Map();
+    host.querySelectorAll('button[data-page]').forEach(b => all.set(b.dataset.page,b));
+    host.replaceChildren();
+    const add = name => {const b=all.get(name);if(b)host.appendChild(b);};
+    ['home','catalog','questions','studyhub'].forEach(add);
+    const groups = [
+      ['LEARNING SOURCES',['usmle','bb','ninja','sources','lectures','books','anatomy3d']],
+      ['STUDY TOOLS',['flashcards','review','focus','planner','mistakes','bookmarks','ai']],
+      ['MY SPACE',['mylibrary','progress','profile','community','admin']]
+    ];
+    for (const [title,routes] of groups) {
+      const items=routes.map(x=>all.get(x)).filter(Boolean);if(!items.length)continue;
+      const section=document.createElement('details');section.className='msh31-mobile-group';
+      const summary=document.createElement('summary');summary.textContent=title;section.appendChild(summary);
+      items.forEach(x=>section.appendChild(x));host.appendChild(section);
+    }
+  }
+  const previousDrawer = window.mshV12BuildDrawer;
+  if (typeof previousDrawer === 'function') window.mshV12BuildDrawer = function(){previousDrawer();groupedMobileNav();};
+
+  const previousDashboard = window.mshV10RenderDashboard;
+  window.mshV10RenderDashboard = function(){dashboard();};
+  const previousLesson = window.openLectureDetail;
+  window.openLectureDetail = function(id) {
+    const l = dataset().find(x=>String(x.id)===String(id));
+    if (l && isPublished(l)) return showLesson(id);
+    if (typeof previousLesson==='function') return previousLesson(id);
+  };
+  const oldGo = window.go;
+  if (typeof oldGo === 'function') window.go = function(page){closeAI();const result=oldGo(page);if(page==='catalog')applyCatalogFilter();if(page==='home' && signedIn())dashboard();const navButton=document.querySelector('#mainNav button.active');navButton?.closest('details')?.setAttribute('open','');return result;};
+
+  function init() {
+    initLogo();authShortcut();
+    byId('mshExploreBtn')?.addEventListener('click', () => byId('mshExploreMore')?.scrollIntoView({behavior:'smooth',block:'start'}));
+    byId('mshCatalogSearch')?.addEventListener('input',applyCatalogFilter);
+    applyCatalogFilter();
+    dashboard();
+    const nav = document.querySelector('#mainNav details');
+    if (nav) document.querySelector('#mainNav details')?.setAttribute('open','');
+    window.addEventListener('msh-auth-updated',()=>{closeAI();authShortcut();dashboard();applyCatalogFilter();});
+  }
+  document.addEventListener('click',e=>{
+    const filter=e.target.closest('[data-msh-catalog-filter]');if(filter){catalogFilter=filter.dataset.mshCatalogFilter;applyCatalogFilter();return;}
+    const lesson=e.target.closest('[data-msh31-open-lecture]');if(lesson){showLesson(lesson.dataset.msh31OpenLecture);return;}
+    const tab=e.target.closest('[data-msh31-tab]');if(tab){lessonTab(tab.dataset.msh31Tab);return;}
+    if(e.target.closest('[data-msh31-back]')) {closeAI();if(typeof goBackSubpage === 'function')goBackSubpage();else go(previewOrigin);return;}
+    if(e.target.closest('[data-msh31-open-ai]')){openAI();return;}
+    if(e.target.closest('[data-msh31-close-ai],#msh31AiBackdrop')){closeAI();return;}
+    const quiz=e.target.closest('[data-msh31-subject-quiz]');if(quiz && typeof goToSubjectQuestions === 'function'){goToSubjectQuestions(quiz.dataset.msh31SubjectQuiz);return;}
+  });
+  document.addEventListener('input',e=>{
+    if(e.target.id !== 'msh31LectureNotes' || !signedIn())return;
+    const key=e.target.dataset.noteKey;
+    if(!key)return;
+    try {localStorage.setItem(key,e.target.value);const label=byId('msh31NoteStatus');if(label)label.textContent='Saved on this device — not cloud synced';}
+    catch {const label=byId('msh31NoteStatus');if(label)label.textContent='Could not save notes on this device';}
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!byId('msh31AiPanel')?.hidden)closeAI();});
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
+})();
+
+</script>
+<script id="msh-v32-refinements-js">
+/* v32: keep permission-gated edit entry visible for verified staff; no role bypass. */
+(function(){
+  'use strict';
+  function sync(){
+    const loggedIn=typeof activeSession!=='undefined'&&Boolean(activeSession?.user);
+    const authLabel=document.getElementById('topAuthText');
+    if(!loggedIn&&authLabel)authLabel.textContent='Log in';
+    const editLink=document.querySelector('.msh-staff-shortcut');
+    if(editLink)editLink.hidden=!(typeof isUserAdminOrOwner==='function'&&isUserAdminOrOwner());
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',sync,{once:true});else sync();
+  window.addEventListener('msh-auth-updated',sync);
 })();
 </script>
 </body>
